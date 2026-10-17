@@ -108,7 +108,7 @@ node demo/nodejs/node-analyze.js <input-folder> <output-folder>
 
 - **GitHub Pages:** pushes to `main` publish the demos automatically ([pages.yml](.github/workflows/pages.yml))
 - **Docker:** `docker build -t human . && docker run -p 8080:8080 human` (nginx, security headers, `/healthz`)
-- **npm release:** push a tag like `v1.0.1` matching `package.json`; [release.yml](.github/workflows/release.yml) publishes it (needs the `NPM_TOKEN` secret)
+- **npm release:** push a tag like `v3.0.1` matching `package.json`; [release.yml](.github/workflows/release.yml) publishes it (needs the `NPM_TOKEN` secret)
 
 ## Links
 

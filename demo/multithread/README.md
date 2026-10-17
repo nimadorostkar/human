@@ -18,7 +18,7 @@ node demo/nodejs/node-multiprocess.js
 
 <!-- eslint-skip -->
 ```json
-2021-06-01 08:54:19 INFO:  human version 1.0.0
+2021-06-01 08:54:19 INFO:  human version 3.0.0
 2021-06-01 08:54:19 INFO:  User: vlado Platform: linux Arch: x64 Node: v16.0.0
 2021-06-01 08:54:19 INFO:  Human multi-process test
 2021-06-01 08:54:19 STATE: Enumerated images: ./assets 15

@@ -30,7 +30,7 @@ node demo/nodejs/node.js
 
 <!-- eslint-skip -->
 ```js
-2021-06-01 08:52:15 INFO:  human version 1.0.0
+2021-06-01 08:52:15 INFO:  human version 3.0.0
 2021-06-01 08:52:15 INFO:  User: vlado Platform: linux Arch: x64 Node: v16.0.0
 2021-06-01 08:52:15 INFO:  Current folder: /home/vlado/dev/human
 2021-06-01 08:52:15 INFO:  Human: 2.0.0

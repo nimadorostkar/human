@@ -1,6 +1,6 @@
 # human
 
-  Version: **1.0.0**  
+  Version: **3.0.0**  
   Description: **Human by Nima Dorostkar: AI-powered 3D Face Detection & Rotation Tracking, Face Description & Recognition, Body Pose Tracking, 3D Hand & Finger Tracking, Iris Analysis, Age & Gender & Emotion Prediction, Gaze Tracking, Gesture Recognition**  
   
   Author: **Nima Dorostkar <nimadorostkar97@gmail.com>**  
@@ -8,6 +8,13 @@
   Repository: **<https://github.com/nimadorostkar/human>**  
   
 ## Changelog
+
+### **3.0.0** 2026/10/17 nimadorostkar97@gmail.com
+
+- new **Vision Studio** main demo: redesigned interface with custom icon set, Overlay / Filters / Engine / Models panels, live stats bar, photo gallery with lightbox, drag and drop overlay and mobile layout
+- main demo asks for camera access only when the camera is started, detects up to 10 faces and offers the `webgpu` backend
+- new `demo/nodejs/node-analyze.js`: annotates a folder of photos with face, body and gesture results plus a details panel, using tiled multi-pass face detection for large, cropped or edge-touching faces
+- shorter, rewritten README with result images
 
 ### **1.0.0** 2026/10/17 nimadorostkar97@gmail.com
 
