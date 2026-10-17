@@ -656,3 +656,24 @@
 2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js passed: insightface {"embedding":512} 
 2026-10-17 18:14:59 [36mINFO: [39m test-backend-node-wasm.js test face attention 
 2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js start face attention 
+2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34697856} 
+2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:15:00 [31mERROR:[39m test-backend-node-wasm.js failed: testDetect face attention 
+2026-10-17 18:15:00 [31mERROR:[39m test-backend-node-wasm.js uncaughtException {"name":"Error","message":"BatchMatMul for non non-float32 tensors not yet supported.","stack":["Error: BatchMatMul for non non-float32 tensors not yet supported.","    at Object.batchMatMul [as kernelFunc] (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-backend-wasm/dist/tf-backend-wasm.node.js:1280:15)","    at kernelFunc (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-core/dist/tf-core.node.js:4707:32)","    at /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-core/dist/tf-core.node.js:4767:27","    at Engine.scopedRun (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-core/dist/tf-core.node.js:4572:23)","    at Engine.runKernelFunc (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-core/dist/tf-core.node.js:4763:14)","    at Engine.runKernel (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-core/dist/tf-core.node.js:4636:21)","    at matMul_ (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-converter/dist/tf-converter.node.js:13414:19)","    at Object.matMul__op [as matMul] (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-converter/dist/tf-converter.node.js:12223:29)","    at executeOp$9 (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-converter/dist/tf-converter.node.js:29619:25)","    at /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-converter/dist/tf-converter.node.js:30199:50"]} 
+2026-10-17 18:15:00 [35mSTATE:[39m all tests complete 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/node.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/node-simple.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/node-event.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/node-similarity.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/node-canvas.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/process-folder.js","passed":1,"failed":"critical"} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/multithread/node-multiprocess.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/facematch/node-match.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../demo/nodejs/node-bench.js","passed":1,"failed":"critical"} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"../test/test-node-emotion.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"test-node-load.js","passed":1,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"test-node-gear.js","passed":4,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"test-backend-node.js","passed":125,"failed":0} 
+2026-10-17 18:15:00 [36mINFO: [39m   status {"test":"test-backend-node-wasm.js","passed":92,"failed":1} 
+2026-10-17 18:15:00 [36mINFO: [39m failures {"count":1} 
+2026-10-17 18:15:00 [33mWARN: [39m   failed {"test":"test-backend-node-wasm.js","message":["error",["failed:","testDetect face attention"]]} 
