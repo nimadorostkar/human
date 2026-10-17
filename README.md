@@ -148,53 +148,41 @@ In the main demo:
 
 <br>
 
-## App Examples
+## Results
 
-[<img src="assets/samples.jpg" width="640"/>](assets/samples.jpg)
+Output of [`demo/nodejs/node-analyze.js`](demo/nodejs/node-analyze.js): face mesh, iris, gaze and body pose drawn on each photo, a numbered label on every face, and a details panel with gender, age, emotion, real/live scores, head rotation and gesture results.
 
-<br>
+```bash
+node demo/nodejs/node-analyze.js <input-folder> <output-folder>
+```
 
-## Options
+**Portrait:** single face with full 468-point mesh and iris tracking  
+[<img src="assets/results/result-1.jpg" width="640"/>](assets/results/result-1.jpg)
 
-All options as presented in the demo application:  
-[demo/index.html](demo/index.html)  
-[<img src="assets/screenshot-menu.png"/>](assets/screenshot-menu.png)
+**Multiple faces:** five tightly cropped faces, found with tiled multi-pass detection  
+[<img src="assets/results/result-2.jpg" width="640"/>](assets/results/result-2.jpg)
 
-<br>
+**Group photo:** 13 faces and multi-person body pose  
+[<img src="assets/results/result-3.jpg" width="640"/>](assets/results/result-3.jpg)
 
-**Results Browser:**  
-[ *Demo -> Display -> Show Results* ]<br>
-[<img src="assets/screenshot-results.png"/>](assets/screenshot-results.png)
+**Outdoor, with sunglasses:** face, iris and body pose  
+[<img src="assets/results/result-4.jpg" width="640"/>](assets/results/result-4.jpg)
 
 <br>
 
 ## Advanced Examples
 
-1. **Face Similarity Matching:**  
+1. **Face Similarity Matching** ([demo/facematch](demo/facematch/index.html)):  
 Extracts all faces from the input images, sorts them by similarity to a selected face  
 and optionally matches the face against a database of known people to guess their names
-> [demo/facematch](demo/facematch/index.html)  
 
-[<img src="assets/screenshot-facematch.jpg" width="640"/>](assets/screenshot-facematch.jpg)
-
-2. **Face Detect:**  
+2. **Face Detect** ([demo/facedetect](demo/facedetect/index.html)):  
 Extracts all detected faces from loaded images and highlights face details on a selected face  
-> [demo/facedetect](demo/facedetect/index.html)  
 
-[<img src="assets/screenshot-facedetect.jpg" width="640"/>](assets/screenshot-facedetect.jpg)
-
-3. **Face ID:**  
+3. **Face ID** ([demo/faceid](demo/faceid/index.html)):  
 Validates that the webcam input shows a real face and matches it to known faces stored in a database
-> [demo/faceid](demo/faceid/index.html)  
 
-[<img src="assets/screenshot-faceid.jpg" width="640"/>](assets/screenshot-faceid.jpg)
-
-<br>
-
-**468-Point Face Mesh Details:**  
-(view in full resolution to see keypoints)  
-
-[<img src="assets/facemesh.png" width="400"/>](assets/facemesh.png)
+All demo options and a results browser are available in the main demo: [demo/index.html](demo/index.html)
 
 <br><hr><br>
 
