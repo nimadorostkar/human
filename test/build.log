@@ -146,3 +146,10 @@
 2026-10-17 17:57:18 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/jpeg","size":86664,"url":"/samples/in/stock-group-2.jpg","remote":"::1"} 
 2026-10-17 17:57:18 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/jpeg","size":168269,"url":"/samples/in/stock-models-6.jpg","remote":"::1"} 
 2026-10-17 17:57:18 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/jpeg","size":154056,"url":"/samples/in/stock-models-7.jpg","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/jpeg","size":8596,"url":"/samples/in/ai-face.jpg","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/json","size":161813,"url":"/models/movenet-lightning.json","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/json","size":602812,"url":"/models/handtrack.json","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/json","size":83013,"url":"/models/handlandmark-lite.json","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/octet-stream","size":4650216,"url":"/models/movenet-lightning.bin","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/octet-stream","size":2023432,"url":"/models/handlandmark-lite.bin","remote":"::1"} 
+2026-10-17 17:57:41 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/octet-stream","size":2964837,"url":"/models/handtrack.bin","remote":"::1"} 
