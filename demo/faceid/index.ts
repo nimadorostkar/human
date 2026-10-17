@@ -7,7 +7,7 @@
  * @license MIT
  */
 
-import * as H from '../../dist/human.esm.js'; // equivalent of human
+import * as H from '../../dist/human.esm.js'; // equivalent of '@nimadorostkar/human'
 import * as indexDb from './indexdb'; // methods to deal with indexdb
 
 const humanConfig = { // user configuration for human, used to fine-tune behavior

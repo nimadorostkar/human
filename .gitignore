@@ -8,3 +8,5 @@ temp
 tmp
 .DS_Store
 .env
+_site
+*.tgz

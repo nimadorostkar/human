@@ -36,3 +36,489 @@
 2026-10-17 18:08:59 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1781:14 
 2026-10-17 18:08:59 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: Node.js v22.23.3 
 2026-10-17 18:08:59 [36mINFO: [39m {"cmd":"../demo/multithread/node-multiprocess.js","args":[]} start 
+2026-10-17 18:11:10 [36mINFO: [39m {"cmd":"../demo/facematch/node-match.js","args":[]} start 
+2026-10-17 18:11:19 [36mINFO: [39m {"cmd":"../demo/nodejs/node-bench.js","args":[]} start 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     throw new Error("The Node.js native addon module (tfjs_binding.node) can not " + 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:           ^ 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Error: The Node.js native addon module (tfjs_binding.node) can not be found at path: /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/lib/napi-v8/tfjs_binding.node.  
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Please run command 'npm rebuild @tensorflow/tfjs-node-gpu --build-addon-from-source' to rebuild the native addon module.  
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: If you have problem with building the addon module, please check https://github.com/tensorflow/tfjs/blob/master/tfjs-node/WINDOWS_TROUBLESHOOTING.md or file an issue. 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Object.<anonymous> (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61:11) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1781:14) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Object..js (node:internal/modules/cjs/loader:1913:10) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Module.load (node:internal/modules/cjs/loader:1505:32) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Function._load (node:internal/modules/cjs/loader:1309:12) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Module.require (node:internal/modules/cjs/loader:1527:12) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at require (node:internal/modules/helpers:147:16) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:1670 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:344 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Thrown at: 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61:11 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1781:14 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1913:10 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1505:32 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1309:12 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1527:12 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at require (node:internal/modules/helpers:147:16) 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:1670 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:344 
+2026-10-17 18:11:28 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Node.js v22.23.3 
+2026-10-17 18:11:38 [36mINFO: [39m {"cmd":"../test/test-node-emotion.js","args":[]} start 
+2026-10-17 18:11:56 [36mINFO: [39m tests: ["test-node-load.js","test-node-gear.js","test-backend-node.js","test-backend-node-gpu.js","test-backend-node-wasm.js"] 
+2026-10-17 18:11:56 [36mINFO: [39m 
+2026-10-17 18:11:56 [36mINFO: [39m test-node-load.js start 
+2026-10-17 18:11:57 [36mINFO: [39m test-node-load.js load start {"human":"1.0.0","tf":"4.22.0","progress":0} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":0,"progress":0} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":38,"progress":0} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":51,"progress":0} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":68,"progress":0} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":90,"progress":0.02443697553522879} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":117,"progress":0.12865823126207815} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":156,"progress":0.2204080722078057} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":165,"progress":0.33826045252170456} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":251,"progress":0.4726970548784964} 
+2026-10-17 18:11:57 [32mDATA: [39m test-node-load.js load interval {"elapsed":296,"progress":0.68355493315821} 
+2026-10-17 18:11:57 [35mSTATE:[39m test-node-load.js passed {"progress":1} 
+2026-10-17 18:11:57 [36mINFO: [39m test-node-load.js load final {"progress":1} 
+2026-10-17 18:11:59 [32mDATA: [39m test-node-load.js load interval {"elapsed":1561,"progress":1} 
+2026-10-17 18:11:59 [36mINFO: [39m 
+2026-10-17 18:11:59 [36mINFO: [39m test-node-gear.js start 
+2026-10-17 18:12:00 [32mDATA: [39m test-node-gear.js input: ["samples/in/ai-face.jpg"] 
+2026-10-17 18:12:01 [35mSTATE:[39m test-node-gear.js passed: gear faceres samples/in/ai-face.jpg 
+2026-10-17 18:12:01 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"faceres","image":"samples/in/ai-face.jpg","age":23.6,"gender":"female","genderScore":0.95,"emotion":[]} 
+2026-10-17 18:12:02 [35mSTATE:[39m test-node-gear.js passed: gear gear samples/in/ai-face.jpg 
+2026-10-17 18:12:02 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"gear","image":"samples/in/ai-face.jpg","age":25.2,"gender":"female","genderScore":0.7,"race":[{"score":0.96,"race":"white"}],"emotion":[]} 
+2026-10-17 18:12:02 [35mSTATE:[39m test-node-gear.js passed: gear ssrnet samples/in/ai-face.jpg 
+2026-10-17 18:12:02 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"ssrnet","image":"samples/in/ai-face.jpg","age":22.6,"gender":"female","genderScore":0.98,"emotion":[]} 
+2026-10-17 18:12:03 [35mSTATE:[39m test-node-gear.js passed: gear ssrnet samples/in/ai-face.jpg 
+2026-10-17 18:12:03 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"ssrnet","image":"samples/in/ai-face.jpg","age":22.6,"gender":"male","emotion":[]} 
+2026-10-17 18:12:03 [36mINFO: [39m 
+2026-10-17 18:12:03 [36mINFO: [39m test-backend-node.js start 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js test: configuration validation 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: configuration default validation [] 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: configuration invalid validation [{"reason":"unknown property","where":"config.invalid = true"}] 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js test: model load 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: models loaded 11 11 [{"name":"blazeface","loaded":true,"size":538928,"url":"file://models/blazeface.json"},{"name":"antispoof","loaded":true,"size":853098,"url":"file://models/antispoof.json"},{"name":"liveness","loaded":true,"size":592976,"url":"file://models/liveness.json"},{"name":"emotion","loaded":true,"size":820516,"url":"file://models/emotion.json"},{"name":"facemesh","loaded":true,"size":1477958,"url":"file://models/facemesh.json"},{"name":"iris","loaded":true,"size":2599092,"url":"file://models/iris.json"},{"name":"handskeleton","loaded":true,"size":0,"url":"file://models/handlandmark-lite.json"},{"name":"handtrack","loaded":true,"size":2964837,"url":"file://models/handtrack.json"},{"name":"movenet","loaded":true,"size":4650216,"url":"file://models/movenet-lightning.json"},{"name":"centernet","loaded":true,"size":4030290,"url":"file://models/centernet.json"},{"name":"faceres","loaded":true,"size":6978814,"url":"file://models/faceres.json"}] 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js memory: {"memory":{"unreliable":true,"numTensors":1785,"numDataBuffers":1785,"numBytes":56431460}} 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js state: {"state":{"registeredVariables":{},"nextTapeNodeId":0,"numBytes":56431460,"numTensors":1785,"numStringTensors":0,"numDataBuffers":1785,"gradientDepth":0,"kernelDepth":0,"scopeStack":[],"numDataMovesStack":[],"nextScopeId":0,"tensorInfo":{},"profiling":false,"activeProfile":{"newBytes":0,"newTensors":0,"peakBytes":0,"kernels":[],"result":null,"kernelNames":[]}}} 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js test: warmup 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: create human 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js human version: 1.0.0 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js platform:  agent:  
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js tfjs version: 4.22.0 
+2026-10-17 18:12:04 [36mINFO: [39m test-backend-node.js env: {"browser":false,"node":true,"platform":"","agent":"","backends":["cpu","tensorflow"],"initial":false,"tfjs":{"version":"4.22.0"},"offscreen":false,"perfadd":false,"tensorflow":{"version":"2.9.1","gpu":false},"wasm":{"supported":true,"backend":false},"webgl":{"supported":false,"backend":false},"webgpu":{"supported":false,"backend":false},"cpu":{"flags":[]},"kernels":172} 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: set backend: tensorflow 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js tensors 1785 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js  result: defined models: 11 loaded models: 11 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: load models 11 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: warmup: none default 
+2026-10-17 18:12:04 [32mDATA: [39m test-backend-node.js  result: face: 0 body: 0 hand: 0 gesture: 0 object: 0 person: 0 {} {} {} 
+2026-10-17 18:12:04 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: null 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js passed: warmup none result match 
+2026-10-17 18:12:04 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:05 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:05 [35mSTATE:[39m test-backend-node.js event: warmup 
+2026-10-17 18:12:05 [35mSTATE:[39m test-backend-node.js passed: warmup: face default 
+2026-10-17 18:12:05 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 6 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.82,"class":"person"} {"score":0.42,"keypoints":4} 
+2026-10-17 18:12:05 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1238 
+2026-10-17 18:12:05 [35mSTATE:[39m test-backend-node.js passed: warmup face result match 
+2026-10-17 18:12:05 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:07 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:07 [35mSTATE:[39m test-backend-node.js event: warmup 
+2026-10-17 18:12:07 [35mSTATE:[39m test-backend-node.js passed: warmup: body default 
+2026-10-17 18:12:07 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:07 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1098 
+2026-10-17 18:12:07 [35mSTATE:[39m test-backend-node.js passed: warmup body result match 
+2026-10-17 18:12:07 [35mSTATE:[39m test-backend-node.js details: {"face":{"boxScore":0.93,"faceScore":1,"age":23.6,"gender":"female","genderScore":0.97},"emotion":[{"score":0.47,"emotion":"angry"},{"score":0.32,"emotion":"fear"},{"score":0.1,"emotion":"neutral"}],"body":{"score":0.92,"keypoints":17},"hand":{"boxScore":0.52,"fingerScore":0.73,"keypoints":21},"gestures":[{"face":0,"gesture":"facing right"},{"face":0,"gesture":"mouth 16% open"},{"hand":0,"gesture":"pinky forward"},{"hand":0,"gesture":"thumb up"},{"hand":0,"gesture":"open palm"},{"iris":0,"gesture":"looking left"},{"iris":0,"gesture":"looking up"}]} 
+2026-10-17 18:12:07 [36mINFO: [39m test-backend-node.js test: details verification 
+2026-10-17 18:12:07 [35mSTATE:[39m test-backend-node.js start default 
+2026-10-17 18:12:08 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:08 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg default 
+2026-10-17 18:12:09 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:09 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 990 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face length 1 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face score 1 0.93 1 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face age/gender 23.6 female 0.97 2.34 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face arrays 4 478 1024 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face emotion 3 {"score":0.48,"emotion":"angry"} 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face anti-spoofing 0.8 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details face liveness 0.93 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details body length 1 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details body 0.92 17 6 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details hand length 1 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details hand 0.51 0.73 point 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details hand arrays 21 5 7 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details gesture length 7 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details gesture first {"face":0,"gesture":"facing right"} 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details object length 1 
+2026-10-17 18:12:09 [35mSTATE:[39m test-backend-node.js passed: details object 0.72 person 
+2026-10-17 18:12:10 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,4] {"checksum":1371996928} 
+2026-10-17 18:12:10 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:11 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:11 [35mSTATE:[39m test-backend-node.js passed: tensor shape: [1,1200,1200,4] dtype: float32 
+2026-10-17 18:12:12 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1200,1200,4] {"checksum":1371996928} 
+2026-10-17 18:12:12 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:13 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:13 [35mSTATE:[39m test-backend-node.js passed: tensor shape: [1200,1200,4] dtype: float32 
+2026-10-17 18:12:14 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:14 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:15 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:15 [35mSTATE:[39m test-backend-node.js passed: tensor shape: [1,1200,1200,3] dtype: float32 
+2026-10-17 18:12:16 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:16 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:17 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:17 [35mSTATE:[39m test-backend-node.js passed: tensor shape: [1200,1200,3] dtype: float32 
+2026-10-17 18:12:18 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,4] {"checksum":1371996871} 
+2026-10-17 18:12:18 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:19 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:19 [35mSTATE:[39m test-backend-node.js passed: tensor shape: [1,1200,1200,4] dtype: int32 
+2026-10-17 18:12:19 [36mINFO: [39m test-backend-node.js test default 
+2026-10-17 18:12:19 [35mSTATE:[39m test-backend-node.js start async 
+2026-10-17 18:12:21 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:21 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:22 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:22 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg async 
+2026-10-17 18:12:22 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:22 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1406 
+2026-10-17 18:12:22 [35mSTATE:[39m test-backend-node.js passed: default result face match 1 female 0.97 
+2026-10-17 18:12:22 [36mINFO: [39m test-backend-node.js test sync 
+2026-10-17 18:12:22 [35mSTATE:[39m test-backend-node.js start sync 
+2026-10-17 18:12:24 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:24 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg sync 
+2026-10-17 18:12:26 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:26 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1660 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js passed: default sync 1 female 0.97 
+2026-10-17 18:12:26 [36mINFO: [39m test-backend-node.js test: image process 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js passed: image input null [1,256,256,3] 
+2026-10-17 18:12:26 [36mINFO: [39m test-backend-node.js test: image null 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js passed: invalid input could not convert input to tensor 
+2026-10-17 18:12:26 [36mINFO: [39m test-backend-node.js test face similarity 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js start face similarity 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:12:26 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:27 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:27 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg face similarity 
+2026-10-17 18:12:27 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 6 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.82,"class":"person"} {"score":0.47,"keypoints":3} 
+2026-10-17 18:12:27 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1053 
+2026-10-17 18:12:27 [35mSTATE:[39m test-backend-node.js start face similarity 
+2026-10-17 18:12:29 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:29 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:30 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:30 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg face similarity 
+2026-10-17 18:12:30 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:30 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1554 
+2026-10-17 18:12:30 [35mSTATE:[39m test-backend-node.js start face similarity 
+2026-10-17 18:12:31 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151289024} 
+2026-10-17 18:12:31 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:32 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:32 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-upper.jpg face similarity 
+2026-10-17 18:12:32 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 0 gesture: 4 object: 1 person: 1 {"score":1,"age":23.5,"gender":"female"} {"score":0.71,"class":"person"} {"score":0.75,"keypoints":7} 
+2026-10-17 18:12:32 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1042 
+2026-10-17 18:12:32 [35mSTATE:[39m test-backend-node.js passed: face descriptor 
+2026-10-17 18:12:32 [35mSTATE:[39m test-backend-node.js passed: face similarity {"similarity":[1,0.43,0.57],"descriptors":[1024,1024,1024]} 
+2026-10-17 18:12:32 [36mINFO: [39m test-backend-node.js test object 
+2026-10-17 18:12:32 [35mSTATE:[39m test-backend-node.js start object 
+2026-10-17 18:12:33 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:33 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:34 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:34 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg object 
+2026-10-17 18:12:34 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:34 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1275 
+2026-10-17 18:12:34 [35mSTATE:[39m test-backend-node.js passed: centernet 
+2026-10-17 18:12:34 [35mSTATE:[39m test-backend-node.js start object 
+2026-10-17 18:12:37 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:37 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:39 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:39 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg object 
+2026-10-17 18:12:39 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 3 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.86,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:39 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1132 
+2026-10-17 18:12:39 [35mSTATE:[39m test-backend-node.js passed: nanodet 
+2026-10-17 18:12:39 [36mINFO: [39m test-backend-node.js test sensitive 
+2026-10-17 18:12:39 [35mSTATE:[39m test-backend-node.js start sensitive 
+2026-10-17 18:12:40 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:40 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg sensitive 
+2026-10-17 18:12:41 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:41 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1141 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js passed: sensitive result match 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js passed: sensitive face result match 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js passed: sensitive face emotion result [{"score":0.48,"emotion":"angry"},{"score":0.31,"emotion":"fear"},{"score":0.11,"emotion":"neutral"}] 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js passed: sensitive body result match 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js passed: sensitive hand result match 
+2026-10-17 18:12:41 [36mINFO: [39m test-backend-node.js test body 
+2026-10-17 18:12:41 [35mSTATE:[39m test-backend-node.js start blazepose 
+2026-10-17 18:12:46 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:46 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:47 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:47 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg blazepose 
+2026-10-17 18:12:47 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.99,"keypoints":39} 
+2026-10-17 18:12:47 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1238 
+2026-10-17 18:12:47 [35mSTATE:[39m test-backend-node.js passed: blazepose 
+2026-10-17 18:12:47 [35mSTATE:[39m test-backend-node.js start efficientpose 
+2026-10-17 18:12:49 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:49 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:50 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:50 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg efficientpose 
+2026-10-17 18:12:50 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.75,"keypoints":13} 
+2026-10-17 18:12:50 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1485 
+2026-10-17 18:12:50 [35mSTATE:[39m test-backend-node.js passed: efficientpose 
+2026-10-17 18:12:50 [35mSTATE:[39m test-backend-node.js start posenet 
+2026-10-17 18:12:52 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:52 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:53 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:53 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg posenet 
+2026-10-17 18:12:53 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.96,"keypoints":16} 
+2026-10-17 18:12:53 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1107 
+2026-10-17 18:12:53 [35mSTATE:[39m test-backend-node.js passed: posenet 
+2026-10-17 18:12:53 [35mSTATE:[39m test-backend-node.js start movenet 
+2026-10-17 18:12:54 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:12:54 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:55 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:55 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg movenet 
+2026-10-17 18:12:55 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:12:55 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 704 
+2026-10-17 18:12:55 [35mSTATE:[39m test-backend-node.js passed: movenet 
+2026-10-17 18:12:55 [36mINFO: [39m test-backend-node.js test face matching 
+2026-10-17 18:12:55 [35mSTATE:[39m test-backend-node.js passed: face database 40 
+2026-10-17 18:12:55 [35mSTATE:[39m test-backend-node.js passed: face match {"first":{"index":4,"similarity":0.78}} {"second":{"index":4,"similarity":0.5}} {"third":{"index":4,"similarity":0.54}} 
+2026-10-17 18:12:55 [36mINFO: [39m test-backend-node.js test face similarity alternative 
+2026-10-17 18:12:55 [35mSTATE:[39m test-backend-node.js start face embeddings 
+2026-10-17 18:12:56 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:12:56 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:12:57 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:12:57 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg face embeddings 
+2026-10-17 18:12:57 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 8 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:12:57 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 767 
+2026-10-17 18:12:57 [35mSTATE:[39m test-backend-node.js passed: mobilefacenet {"embedding":192} 
+2026-10-17 18:12:57 [35mSTATE:[39m test-backend-node.js start face embeddings 
+2026-10-17 18:12:59 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:12:59 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:00 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:00 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg face embeddings 
+2026-10-17 18:13:00 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 8 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:13:00 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1828 
+2026-10-17 18:13:00 [35mSTATE:[39m test-backend-node.js passed: insightface {"embedding":512} 
+2026-10-17 18:13:00 [36mINFO: [39m test-backend-node.js test face attention 
+2026-10-17 18:13:00 [35mSTATE:[39m test-backend-node.js start face attention 
+2026-10-17 18:13:02 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:13:02 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:03 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:03 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg face attention 
+2026-10-17 18:13:03 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 2 gesture: 7 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:13:03 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 1626 
+2026-10-17 18:13:03 [35mSTATE:[39m test-backend-node.js passed: face attention 
+2026-10-17 18:13:03 [36mINFO: [39m test-backend-node.js test detectors 
+2026-10-17 18:13:03 [35mSTATE:[39m test-backend-node.js start detectors 
+2026-10-17 18:13:05 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:13:05 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:06 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:06 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg detectors 
+2026-10-17 18:13:06 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.93,"gender":"unknown"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:13:06 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 719 
+2026-10-17 18:13:06 [35mSTATE:[39m test-backend-node.js passed: detector result face match 
+2026-10-17 18:13:06 [35mSTATE:[39m test-backend-node.js passed: detector result hand match 
+2026-10-17 18:13:06 [36mINFO: [39m test-backend-node.js test: multi-instance 
+2026-10-17 18:13:06 [35mSTATE:[39m test-backend-node.js start multi instance 
+2026-10-17 18:13:06 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:07 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:07 [35mSTATE:[39m test-backend-node.js passed: detect: random multi instance 
+2026-10-17 18:13:07 [32mDATA: [39m test-backend-node.js  result: face: 0 body: 1 hand: 0 gesture: 0 object: 0 person: 0 {} {} {"score":0,"keypoints":0} 
+2026-10-17 18:13:07 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 459 
+2026-10-17 18:13:07 [36mINFO: [39m test-backend-node.js test: first instance 
+2026-10-17 18:13:07 [35mSTATE:[39m test-backend-node.js start multi instance 
+2026-10-17 18:13:07 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151289024} 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-upper.jpg multi instance 
+2026-10-17 18:13:08 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 0 gesture: 0 object: 0 person: 1 {"score":0.97,"gender":"unknown"} {} {"score":0.75,"keypoints":7} 
+2026-10-17 18:13:08 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 583 
+2026-10-17 18:13:08 [36mINFO: [39m test-backend-node.js test: second instance 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start multi instance 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151289024} 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-upper.jpg multi instance 
+2026-10-17 18:13:08 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 0 gesture: 0 object: 0 person: 1 {"score":0.97,"gender":"unknown"} {} {"score":0.75,"keypoints":7} 
+2026-10-17 18:13:08 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 394 
+2026-10-17 18:13:08 [36mINFO: [39m test-backend-node.js test: concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:08 [35mSTATE:[39m test-backend-node.js start concurrent 
+2026-10-17 18:13:09 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:13:09 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:13:09 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:13:10 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:13:12 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:13:13 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:13:14 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151289024} 
+2026-10-17 18:13:15 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151289024} 
+2026-10-17 18:13:15 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151289024} 
+2026-10-17 18:13:15 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:15 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:15 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-upper.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 0 gesture: 0 object: 0 person: 1 {"score":0.97,"gender":"unknown"} {} {"score":0.75,"keypoints":7} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5421 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-upper.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 0 gesture: 0 object: 0 person: 1 {"score":0.97,"gender":"unknown"} {} {"score":0.75,"keypoints":7} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5421 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-upper.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 0 gesture: 0 object: 0 person: 1 {"score":0.97,"gender":"unknown"} {} {"score":0.75,"keypoints":7} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5421 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.9,"gender":"unknown"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5426 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.9,"gender":"unknown"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5426 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-face.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.9,"gender":"unknown"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5426 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.93,"gender":"unknown"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5426 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.93,"gender":"unknown"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5426 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: detect: samples/in/ai-body.jpg concurrent 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: face: 1 body: 1 hand: 1 gesture: 0 object: 0 person: 1 {"score":0.93,"gender":"unknown"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:13:21 [32mDATA: [39m test-backend-node.js  result: performance: load: null total: 5426 
+2026-10-17 18:13:21 [36mINFO: [39m test-backend-node.js test: monkey-patch 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js event: image 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js event: detect 
+2026-10-17 18:13:21 [35mSTATE:[39m test-backend-node.js passed: monkey patch 
+2026-10-17 18:13:22 [35mSTATE:[39m test-backend-node.js passed: segmentation [262144] 
+2026-10-17 18:13:22 [35mSTATE:[39m test-backend-node.js passeed: equal usage 
+2026-10-17 18:13:22 [36mINFO: [39m test-backend-node.js test: input compare 
+2026-10-17 18:13:23 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34696124} 
+2026-10-17 18:13:24 [35mSTATE:[39m test-backend-node.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1004796864} 
+2026-10-17 18:13:25 [35mSTATE:[39m test-backend-node.js passed: image compare 0 23.275441687091504 
+2026-10-17 18:13:25 [36mINFO: [39m test-backend-node.js events: {"image":29,"detect":29,"warmup":2} 
+2026-10-17 18:13:25 [36mINFO: [39m test-backend-node.js tensors 14855 
+2026-10-17 18:13:25 [36mINFO: [39m test-backend-node.js test complete: 80760 ms 
+2026-10-17 18:13:25 [36mINFO: [39m 
+2026-10-17 18:13:25 [36mINFO: [39m test-backend-node-gpu.js start 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr: /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     throw new Error("The Node.js native addon module (tfjs_binding.node) can not " + 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     ^ 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr: Error: The Node.js native addon module (tfjs_binding.node) can not be found at path: /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/lib/napi-v8/tfjs_binding.node.  
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr: Please run command 'npm rebuild @tensorflow/tfjs-node-gpu --build-addon-from-source' to rebuild the native addon module.  
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr: If you have problem with building the addon module, please check https://github.com/tensorflow/tfjs/blob/master/tfjs-node/WINDOWS_TROUBLESHOOTING.md or file an issue. 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Object.<anonymous> (/Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61:11) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1781:14) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Object..js (node:internal/modules/cjs/loader:1913:10) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Module.load (node:internal/modules/cjs/loader:1505:32) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Function._load (node:internal/modules/cjs/loader:1309:12) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Module.require (node:internal/modules/cjs/loader:1527:12) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at require (node:internal/modules/helpers:147:16) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:1670 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:344 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr: Thrown at: 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /Users/nima/Projects/human/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61:11 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1781:14 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1913:10 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1505:32 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1309:12 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1527:12 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at require (node:internal/modules/helpers:147:16) 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:1670 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /Users/nima/Projects/human/dist/human.node-gpu.js:7:344 
+2026-10-17 18:13:27 [33mWARN: [39m test-backend-node-gpu.js stderr: Node.js v22.23.3 
+2026-10-17 18:13:27 [36mINFO: [39m 
+2026-10-17 18:13:27 [36mINFO: [39m test-backend-node-wasm.js start 
+2026-10-17 18:13:28 [32mDATA: [39m test-backend-node-wasm.js stdout: 2026-10-17 18:13:28 [36mINFO: [39m { supported: [33mtrue[39m, backend: [33mtrue[39m, simd: [90mundefined[39m, multithread: [90mundefined[39m } https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@4.22.0/dist/ 
+2026-10-17 18:13:28 [35mSTATE:[39m test-backend-node-wasm.js passed: model server: https://vladmandic.github.io/human-models/models/ 
+2026-10-17 18:13:28 [36mINFO: [39m test-backend-node-wasm.js test: configuration validation 
+2026-10-17 18:13:28 [35mSTATE:[39m test-backend-node-wasm.js passed: configuration default validation [] 
+2026-10-17 18:13:28 [35mSTATE:[39m test-backend-node-wasm.js passed: configuration invalid validation [{"reason":"unknown property","where":"config.invalid = true"}] 
+2026-10-17 18:13:28 [36mINFO: [39m test-backend-node-wasm.js test: model load 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js passed: models loaded 11 11 [{"name":"blazeface","loaded":true,"size":538928,"url":"https://vladmandic.github.io/human-models/models/blazeface.json"},{"name":"facemesh","loaded":true,"size":1477958,"url":"https://vladmandic.github.io/human-models/models/facemesh.json"},{"name":"antispoof","loaded":true,"size":853098,"url":"https://vladmandic.github.io/human-models/models/antispoof.json"},{"name":"liveness","loaded":true,"size":592976,"url":"https://vladmandic.github.io/human-models/models/liveness.json"},{"name":"emotion","loaded":true,"size":820516,"url":"https://vladmandic.github.io/human-models/models/emotion.json"},{"name":"movenet","loaded":true,"size":4650216,"url":"https://vladmandic.github.io/human-models/models/movenet-lightning.json"},{"name":"handskeleton","loaded":true,"size":0,"url":"https://vladmandic.github.io/human-models/models/handlandmark-lite.json"},{"name":"centernet","loaded":true,"size":4030290,"url":"https://vladmandic.github.io/human-models/models/centernet.json"},{"name":"faceres","loaded":true,"size":6978814,"url":"https://vladmandic.github.io/human-models/models/faceres.json"},{"name":"iris","loaded":true,"size":2599092,"url":"https://vladmandic.github.io/human-models/models/iris.json"},{"name":"handtrack","loaded":true,"size":2964837,"url":"https://vladmandic.github.io/human-models/models/handtrack.json"}] 
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js memory: {"memory":{"unreliable":false,"numTensors":1785,"numDataBuffers":1785,"numBytes":56431460}} 
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js state: {"state":{"registeredVariables":{},"nextTapeNodeId":0,"numBytes":56431460,"numTensors":1785,"numStringTensors":0,"numDataBuffers":1785,"gradientDepth":0,"kernelDepth":0,"scopeStack":[],"numDataMovesStack":[],"nextScopeId":0,"tensorInfo":{},"profiling":false,"activeProfile":{"newBytes":0,"newTensors":0,"peakBytes":0,"kernels":[],"result":null,"kernelNames":[]}}} 
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js test: warmup 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js passed: create human 
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js human version: 1.0.0 
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js platform:  agent:  
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js tfjs version: 4.22.0 
+2026-10-17 18:13:30 [36mINFO: [39m test-backend-node-wasm.js env: {"browser":false,"node":true,"platform":"","agent":"","backends":["wasm"],"initial":false,"tfjs":{"version":"4.22.0"},"offscreen":false,"perfadd":false,"tensorflow":{},"wasm":{"supported":true,"backend":true,"simd":true,"multithread":false},"webgl":{"supported":false,"backend":false},"webgpu":{"supported":false,"backend":false},"cpu":{"flags":[]},"kernels":174} 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js passed: set backend: wasm 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js tensors 1785 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js  result: defined models: 11 loaded models: 11 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js passed: load models 11 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js passed: warmup: none default 
+2026-10-17 18:13:30 [32mDATA: [39m test-backend-node-wasm.js  result: face: 0 body: 0 hand: 0 gesture: 0 object: 0 person: 0 {} {} {} 
+2026-10-17 18:13:30 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: null 
+2026-10-17 18:13:30 [35mSTATE:[39m test-backend-node-wasm.js passed: warmup none result match 
+2026-10-17 18:13:31 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:34 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:34 [35mSTATE:[39m test-backend-node-wasm.js event: warmup 
+2026-10-17 18:13:34 [35mSTATE:[39m test-backend-node-wasm.js passed: warmup: face default 
+2026-10-17 18:13:34 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 6 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.82,"class":"person"} {"score":0.47,"keypoints":3} 
+2026-10-17 18:13:34 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 2663 
+2026-10-17 18:13:34 [35mSTATE:[39m test-backend-node-wasm.js passed: warmup face result match 
+2026-10-17 18:13:34 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:36 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:36 [35mSTATE:[39m test-backend-node-wasm.js event: warmup 
+2026-10-17 18:13:36 [35mSTATE:[39m test-backend-node-wasm.js passed: warmup: body default 
+2026-10-17 18:13:36 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:13:36 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1935 
+2026-10-17 18:13:36 [35mSTATE:[39m test-backend-node-wasm.js passed: warmup body result match 
+2026-10-17 18:13:36 [35mSTATE:[39m test-backend-node-wasm.js details: {"face":{"boxScore":0.93,"faceScore":1,"age":23.6,"gender":"female","genderScore":0.97},"emotion":[{"score":0.48,"emotion":"angry"},{"score":0.31,"emotion":"fear"},{"score":0.11,"emotion":"neutral"}],"body":{"score":0.92,"keypoints":17},"hand":{"boxScore":0.51,"fingerScore":0.73,"keypoints":21},"gestures":[{"face":0,"gesture":"facing right"},{"face":0,"gesture":"mouth 16% open"},{"hand":0,"gesture":"pinky forward"},{"hand":0,"gesture":"thumb up"},{"hand":0,"gesture":"open palm"},{"iris":0,"gesture":"looking left"},{"iris":0,"gesture":"looking up"}]} 
+2026-10-17 18:13:36 [36mINFO: [39m test-backend-node-wasm.js test: details verification 
+2026-10-17 18:13:36 [35mSTATE:[39m test-backend-node-wasm.js start default 
+2026-10-17 18:13:38 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:13:38 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg default 
+2026-10-17 18:13:39 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:13:39 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1786 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face length 1 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face score 1 0.93 1 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face age/gender 23.6 female 0.97 2.34 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face arrays 4 478 1024 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face emotion 3 {"score":0.48,"emotion":"angry"} 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face anti-spoofing 0.8 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details face liveness 0.93 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details body length 1 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details body 0.92 17 6 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details hand length 1 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details hand 0.51 0.73 point 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details hand arrays 21 5 7 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details gesture length 7 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details gesture first {"face":0,"gesture":"facing right"} 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details object length 1 
+2026-10-17 18:13:39 [35mSTATE:[39m test-backend-node-wasm.js passed: details object 0.72 person 
+2026-10-17 18:13:40 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,4] {"checksum":1413675264} 
+2026-10-17 18:13:41 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:42 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:42 [35mSTATE:[39m test-backend-node-wasm.js passed: tensor shape: [1,1200,1200,4] dtype: float32 
+2026-10-17 18:13:43 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1200,1200,4] {"checksum":1413675264} 
+2026-10-17 18:13:44 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:45 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:45 [35mSTATE:[39m test-backend-node-wasm.js passed: tensor shape: [1200,1200,4] dtype: float32 
+2026-10-17 18:13:46 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:13:46 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:48 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:48 [35mSTATE:[39m test-backend-node-wasm.js passed: tensor shape: [1,1200,1200,3] dtype: float32 
+2026-10-17 18:13:49 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:13:49 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:51 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:51 [35mSTATE:[39m test-backend-node-wasm.js passed: tensor shape: [1200,1200,3] dtype: float32 
+2026-10-17 18:13:52 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,4] {"checksum":1371996871} 
+2026-10-17 18:13:52 [35mSTATE:[39m test-backend-node-wasm.js event: image 

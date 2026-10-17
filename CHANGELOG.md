@@ -14,7 +14,15 @@
 - initial release of `human` by Nima Dorostkar
 - based on [Human](https://github.com/vladmandic/human) v3.3.6 by Vladimir Mandic (MIT)
 - rebranded package name, metadata, banners and documentation
-- added `npm run serve` script for the local development server
-- documented local setup and Node.js version notes
+- published as `@nimadorostkar/human` (the unscoped `human` name is taken on npm)
+- fixed `exports` map so subpath imports such as `@nimadorostkar/human/dist/human.esm.js` resolve; added `files` whitelist so the package ships only `dist`, `types` and `models`
+- full `npm run build` no longer needs native `tfjs-node`, so it runs on any Node.js version
+- test runner now exits with an error code when any test fails; CUDA backend test is opt-in via `HUMAN_TEST_GPU=true`
+- fixed lint errors in `draw.all` and model loading; demo TypeScript files are now linted
+- demos load bundled local models instead of a third-party host
+- added CI (lint, typecheck, build, tests), CodeQL v3, Dependabot, tag-based npm release with provenance, GitHub Pages deployment and a production Docker image
+- added landing page for the demo site
+- minimum Node.js version is now 18
+- added `npm run serve`, `npm run compile` and `npm run typecheck` scripts
 
 For history prior to 1.0.0, see the upstream changelog: <https://github.com/vladmandic/human/blob/main/CHANGELOG.md>

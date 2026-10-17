@@ -11,10 +11,10 @@ const tests = [
   'test-node-load.js',
   'test-node-gear.js',
   'test-backend-node.js',
-  'test-backend-node-gpu.js',
   'test-backend-node-wasm.js',
   // 'test-backend-node-cpu.js',
 ];
+if (process.env.HUMAN_TEST_GPU === 'true') tests.push('test-backend-node-gpu.js'); // requires nvidia cuda and a native build of tfjs-node-gpu
 
 const demos = [
   { cmd: '../demo/nodejs/node.js', args: [] },
@@ -130,6 +130,11 @@ async function testAll() {
   }
   log.info('failures', { count: failedMessages.length });
   for (const msg of failedMessages) log.warn('  failed', { test: msg.test, message: msg.data });
+  const critical = Object.values(status).filter((result) => result.failed === 'critical').length;
+  if (failedMessages.length > 0 || critical > 0) {
+    log.error('tests failed', { failed: failedMessages.length, critical });
+    process.exitCode = 1; // fail ci when any test or demo reports a failure
+  }
 }
 
 testAll();

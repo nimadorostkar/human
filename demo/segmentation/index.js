@@ -7,7 +7,7 @@
  * @license MIT
  */
 
-import * as H from '../../dist/human.esm.js'; // equivalent of human
+import * as H from '../../dist/human.esm.js'; // equivalent of '@nimadorostkar/human'
 
 const humanConfig = { // user configuration for human, used to fine-tune behavior
   modelBasePath: 'https://vladmandic.github.io/human-models/models/',

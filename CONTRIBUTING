@@ -11,8 +11,10 @@ Procedure for contributing:
 - Clone your forked repository to your local system  
   `git clone https://github.com/<your-username>/human`
 - Make your changes  
+- Install dependencies on Node 22 (`nvm use`)  
+  `npm ci --ignore-scripts` and, for Node.js tests, `npm rebuild @tensorflow/tfjs-node canvas`
 - Test your changes against code guidelines  
-  `npm run lint`
+  `npm run lint` and `npm run typecheck`
 - Test your changes in Browser and NodeJS  
   `npm run dev` and navigate to http://localhost:8000  
   `npm test`  

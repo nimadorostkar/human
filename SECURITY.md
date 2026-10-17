@@ -1,32 +1,40 @@
 # Security & Privacy Policy
 
-<br>
+## Supported versions
 
-## Issues
+Security fixes are released for the latest published version of `@nimadorostkar/human`.
 
-All issues are tracked publicly on GitHub: <https://github.com/nimadorostkar/human/issues>  
+## Reporting a vulnerability
 
-<br>
+Please **do not** open a public issue for security problems.  
+Report them privately through [GitHub security advisories](https://github.com/nimadorostkar/human/security/advisories/new) or by email to **Nima Dorostkar** <nimadorostkar97@gmail.com>.
 
-## Vulnerabilities
+Include a description, steps to reproduce and the affected version. You can expect an initial reply within 7 days.
 
-`Human` library code base and indluded dependencies are automatically scanned against known security vulnerabilities  
-Any code commit is validated before merge  
+## Automated checks
 
-- [Dependencies](https://github.com/nimadorostkar/human/security/dependabot)
-- [Scanning Alerts](https://github.com/nimadorostkar/human/security/code-scanning)
+Every push and pull request runs lint, type-checking, a full build and the Node.js test suite.  
+Dependencies and code are scanned automatically:
 
-<br>
+- [Dependabot alerts](https://github.com/nimadorostkar/human/security/dependabot)
+- [CodeQL code scanning](https://github.com/nimadorostkar/human/security/code-scanning)
+
+The published npm package has **no runtime dependencies**; TensorFlow/JS is bundled into `dist/`.
 
 ## Privacy
 
-`Human` library and included demo apps:
+The `human` library and the included demo apps:
 
-- Are fully self-contained and does not send or share data of any kind with external targets
-- Do not store any user or system data tracking, user provided inputs (images, video) or detection results
-- Do not utilize any analytic services (such as Google Analytics)
+- Run detection locally, in the browser or in Node.js; images, video and results are never uploaded
+- Do not store user inputs or detection results, except where a demo says so (the *Face ID* demo keeps face descriptors in the browser's IndexedDB)
+- Do not use any analytics or tracking services
 
-`Human` library can establish external connections *only* for following purposes and *only* when explicitly configured by user:
+The library makes network requests *only* for:
 
-- Load models from externally hosted site (e.g. CDN)
-- Load inputs for detection from *http & https* sources
+- Loading models from `modelBasePath` (local by default; a CDN only if you configure one)
+- Loading WASM binaries from `wasmPath` when the `wasm` backend is used (defaults to the jsDelivr CDN; host the files yourself to avoid this)
+- Loading inputs you pass as `http` or `https` URLs
+
+## Usage restrictions
+
+See [CODE_OF_CONDUCT](CODE_OF_CONDUCT): `human` must not be used for life-critical decisions or for surveillance without the consent of the people being observed.

@@ -5,7 +5,7 @@
  *
  */
 
-import { Human } from '../../dist/human.esm.js'; // equivalent of human
+import { Human } from '../../dist/human.esm.js'; // equivalent of '@nimadorostkar/human'
 import GLBench from '../helpers/gl-bench.js';
 
 const workerJS = '../multithread/worker.js';

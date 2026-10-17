@@ -1,6 +1,8 @@
 ![Version](https://img.shields.io/github/package-json/v/nimadorostkar/human?style=flat-square&svg=true&label=version)
 ![Last Commit](https://img.shields.io/github/last-commit/nimadorostkar/human?style=flat-square&svg=true)
 ![License](https://img.shields.io/github/license/nimadorostkar/human?style=flat-square&svg=true)
+![CI](https://img.shields.io/github/actions/workflow/status/nimadorostkar/human/ci.yml?branch=main&style=flat-square&label=ci)
+![npm](https://img.shields.io/npm/v/@nimadorostkar/human?style=flat-square)
 
 # human
 
@@ -9,6 +11,9 @@
 **Age & Gender & Emotion Prediction, Gaze Tracking, Gesture Recognition, Body Segmentation**  
 
 Developed and maintained by **Nima Dorostkar** ([@nimadorostkar](https://github.com/nimadorostkar))
+
+**Live demos:** <https://nimadorostkar.github.io/human/>  
+**npm:** [`@nimadorostkar/human`](https://www.npmjs.com/package/@nimadorostkar/human)
 
 <br>
 
@@ -29,12 +34,13 @@ Developed and maintained by **Nima Dorostkar** ([@nimadorostkar](https://github.
 
 ## Run it locally
 
-Requirements: **Node.js** and **npm**, plus a modern browser (Chrome/Edge recommended).
+Requirements: **Node.js 22** (see [`.nvmrc`](.nvmrc)) and **npm**, plus a modern browser (Chrome/Edge recommended).
 
 ```bash
 git clone https://github.com/nimadorostkar/human.git
 cd human
-npm install --ignore-scripts
+nvm use
+npm ci --ignore-scripts
 npm run serve
 ```
 
@@ -48,8 +54,8 @@ The repository already ships a pre-built library in `dist/` and all models in `m
 
 **Notes**
 
-- `--ignore-scripts` skips native builds of `@tensorflow/tfjs-node`, `@tensorflow/tfjs-node-gpu` and `canvas`. They are only needed for the Node.js demos and tests, not for the browser demos.
-- The Node.js backend (`tfjs-node`) supports Node.js **14.x to 22.x**. To run the Node.js demos or `npm test`, use Node 22 (for example `nvm use 22`) and run a plain `npm install`.
+- `--ignore-scripts` skips native builds of `@tensorflow/tfjs-node`, `@tensorflow/tfjs-node-gpu` and `canvas`. Browser demos and `npm run build` do not need them.
+- To run the Node.js demos or `npm test`, build the native modules once on Node 22: `npm rebuild @tensorflow/tfjs-node canvas`
 - Webcam access needs `localhost` or HTTPS. Allow camera access when the browser asks.
 
 ### Scripts
@@ -58,11 +64,12 @@ The repository already ships a pre-built library in `dist/` and all models in `m
 | --- | --- |
 | `npm run serve` | Start the local dev server on ports 8000 (HTTP) and 8001 (HTTPS) |
 | `npm run dev` | Dev server plus file watching and incremental rebuilds |
-| `npm run compile` | Re-bundle `dist/` and the TypeScript demos with esbuild (works on any Node version) |
-| `npm run build` | Full production build of `dist/`, `types/` and `typedoc/` (needs `tfjs-node`, so Node 22 or older) |
-| `npm start` | Run the main Node.js demo (needs `tfjs-node`) |
-| `npm test` | Run the Node.js test suite (needs `tfjs-node`) |
+| `npm run compile` | Re-bundle `dist/` and the TypeScript demos with esbuild |
+| `npm run build` | Full production build: `dist/`, `types/`, `typedoc/`, lint and model manifest |
 | `npm run lint` | Lint the sources |
+| `npm run typecheck` | Type-check with `tsc` |
+| `npm test` | Run the Node.js tests and demos (needs native `tfjs-node`; set `HUMAN_TEST_GPU=true` to include the CUDA backend test) |
+| `npm start` | Run the main Node.js demo (needs native `tfjs-node`) |
 
 <br>
 
@@ -80,7 +87,7 @@ The repository already ships a pre-built library in `dist/` and all models in `m
   - *WASM* backend for architectures where *tensorflow* binaries are not available  
   - *tfjs-node* using software execution via *tensorflow* shared libraries  
   - *tfjs-node-gpu* using GPU-accelerated execution via *tensorflow* shared libraries and NVIDIA CUDA  
-  - Supported versions are **14.x** to **22.x**  
+  - Supported versions are **18.x** to **22.x** (the native `tfjs-node` bindings do not support newer releases yet; the WASM backend works on any version)  
 
 <br>
 
@@ -193,23 +200,36 @@ Validates that the webcam input shows a real face and matches it to known faces 
 
 ## Quick Start
 
-Load the IIFE build directly in your HTML page:
+Install from npm:
+
+```bash
+npm install @nimadorostkar/human
+```
+
+Use it with a bundler (Vite, webpack, esbuild, Next.js):
+
+```js
+import { Human } from '@nimadorostkar/human';
+
+const human = new Human({ modelBasePath: '/models/' }); // serve the files from node_modules/@nimadorostkar/human/models
+```
+
+Or load it straight from a CDN without a build step:
 
 ```html
-<!DOCTYPE HTML>
-<script src="dist/human.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@nimadorostkar/human/dist/human.js"></script>
+<script>
+  const human = new Human.Human({ modelBasePath: 'https://cdn.jsdelivr.net/npm/@nimadorostkar/human/models/' });
+</script>
 ```
 
-Or import the ESM build:
+Or in Node.js, together with a TensorFlow backend:
 
 ```js
-import { Human } from './dist/human.esm.js';
-```
+const tf = require('@tensorflow/tfjs-node'); // load backend before human
+const { Human } = require('@nimadorostkar/human');
 
-Or in Node.js (after installing this repository as a dependency):
-
-```js
-const { Human } = require('human');
+const human = new Human({ modelBasePath: 'file://node_modules/@nimadorostkar/human/models/' });
 ```
 
 <br>
@@ -356,7 +376,7 @@ For even better performance, run detection in a separate web worker (see [demo/m
 *Note*: This does not include the embedded `tfjs`  
 To use the embedded `tfjs` (`human.tf` namespace) with full typedefs, add:
 
-> import type * as tfjs from 'human/dist/tfjs.esm';  
+> import type * as tfjs from '@nimadorostkar/human/dist/tfjs.esm';  
 > const tf = human.tf as typeof tfjs;
 
 This needs these dev-only dependencies for the types:
@@ -379,6 +399,35 @@ This needs these dev-only dependencies for the types:
 
 Alternative models are included in [`models/`](models) and can be enabled through configuration (see [`src/config.ts`](src/config.ts)).  
 For example, body pose detection uses *MoveNet Lightning* by default, but can switch to *MoveNet Thunder* for higher precision, *MoveNet MultiPose* for multiple people, or *PoseNet*, *BlazePose* or *EfficientPose*.
+
+<br><hr><br>
+
+## Production
+
+### Deploy the demo site
+
+- **GitHub Pages:** every push to `main` builds the project and publishes the demos, models and API docs with [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Enable it once under *Settings → Pages → Source: GitHub Actions*.
+- **Docker:** a multi-stage [`Dockerfile`](Dockerfile) builds everything and serves it with unprivileged nginx on port 8080, with security headers, gzip, long-lived caching for models and bundles, and a `/healthz` endpoint:
+
+  ```bash
+  docker build -t human .
+  docker run --rm -p 8080:8080 human
+  ```
+
+  Webcam demos need HTTPS outside `localhost`, so put the container behind a TLS-terminating proxy.
+- **Any static host:** run `npm run build && ./deploy/site.sh _site` and upload the `_site` folder.
+
+### Publish a release
+
+1. Update the version in `package.json` and add an entry to [`CHANGELOG.md`](CHANGELOG.md)
+2. Commit, then tag and push: `git tag v1.0.1 && git push origin main --tags`
+3. [`.github/workflows/release.yml`](.github/workflows/release.yml) checks that the tag matches `package.json`, builds, publishes to npm with provenance and creates a GitHub release
+
+The release workflow needs an npm automation token saved as the `NPM_TOKEN` repository secret.
+
+### Continuous integration
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs lint, type-checking, the full build, a package dry-run and the Node.js test suite on every push and pull request. CodeQL scans the code weekly and Dependabot keeps dependencies and actions current.
 
 <br><hr><br>
 

@@ -13,8 +13,8 @@ const process = require('process');
 const log = require('@vladmandic/pilogger'); // eslint-disable-line node/no-unpublished-require
 const canvas = require('canvas'); // eslint-disable-line node/no-unpublished-require
 // for nodejs, `tfjs-node` or `tfjs-node-gpu` should be loaded before using Human
-const tf = require('@tensorflow/tfjs-node-gpu'); // eslint-disable-line node/no-unpublished-require
-const Human = require('../../dist/human.node-gpu.js'); // this is 'const Human = require('../dist/human.node-gpu.js').default;'
+const tf = require('@tensorflow/tfjs-node'); // eslint-disable-line node/no-unpublished-require
+const Human = require('../../dist/human.node.js'); // use `tfjs-node-gpu` with `human.node-gpu.js` instead on systems with nvidia cuda
 
 const config = { // just enable all and leave default settings
   modelBasePath: 'file://models',

@@ -10,7 +10,7 @@ const log = require('@vladmandic/pilogger'); // eslint-disable-line node/no-unpu
 // in nodejs environments tfjs-node is required to be loaded before human
 const tf = require('@tensorflow/tfjs-node'); // eslint-disable-line node/no-unpublished-require
 const canvas = require('canvas'); // eslint-disable-line node/no-unpublished-require
-// const human = require('human'); // use this when human is installed as module (majority of use cases)
+// const human = require('@nimadorostkar/human'); // use this when human is installed as module (majority of use cases)
 const Human = require('../../dist/human.node.js'); // use this when using human in dev mode
 
 const config = { // just enable all and leave default settings

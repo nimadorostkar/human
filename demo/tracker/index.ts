@@ -7,7 +7,7 @@
  * @license MIT
  */
 
-import * as H from '../../dist/human.esm.js'; // equivalent of human
+import * as H from '../../dist/human.esm.js'; // equivalent of '@nimadorostkar/human'
 import tracker from './tracker.js';
 
 const humanConfig: Partial<H.Config> = { // user configuration for human, used to fine-tune behavior

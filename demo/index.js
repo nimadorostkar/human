@@ -23,7 +23,7 @@
 // Newer versions of Human have richer functionality allowing for much cleaner & easier usage
 // It is recommended to use other demos such as `demo/typescript` for usage examples
 
-import { Human } from '../dist/human.esm.js'; // equivalent of human
+import { Human } from '../dist/human.esm.js'; // equivalent of '@nimadorostkar/human'
 import Menu from './helpers/menu.js';
 import GLBench from './helpers/gl-bench.js';
 import webRTC from './helpers/webrtc.js';
