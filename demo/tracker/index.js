@@ -1192,7 +1192,7 @@ var humanConfig = {
   // cacheSensitivity: 0,
   // cacheModels: false,
   // warmup: 'none',
-  modelBasePath: "https://vladmandic.github.io/human-models/models",
+  modelBasePath: "../../models",
   filter: { enabled: true, equalization: false, flip: false },
   face: {
     enabled: true,
