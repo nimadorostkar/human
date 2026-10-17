@@ -6,6 +6,5 @@ samples/**/*.mp4
 samples/**/*.webm
 temp
 tmp
-samples/out
 .DS_Store
 .env

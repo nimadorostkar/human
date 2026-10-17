@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      - run: npm ci --ignore-scripts
+      - name: Verify tag matches package version
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          if [ "v${VERSION}" != "${GITHUB_REF_NAME}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match package.json version ${VERSION}" >&2
+            exit 1
+          fi
+      - run: npm run build
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create GitHub release
+        run: gh release create "${GITHUB_REF_NAME}" --title "${GITHUB_REF_NAME}" --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}

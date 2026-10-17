@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>human by Nima Dorostkar</title>
+    <meta name="description" content="human: AI-powered face, body, hand, iris, gaze and gesture tracking in the browser. Author: Nima Dorostkar">
+    <link rel="icon" href="favicon.ico">
+    <style>
+      :root { --bg: #ffffff; --fg: #16181d; --muted: #5b6270; --card: #f4f5f7; --border: #e2e4e9; --accent: #2f6fde; }
+      @media (prefers-color-scheme: dark) { :root { --bg: #0e0f12; --fg: #eceef2; --muted: #9aa1ad; --card: #17191e; --border: #262a31; --accent: #6fa0ff; } }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+      main { max-width: 960px; margin: 0 auto; padding: 48px 16px 64px; }
+      h1 { font-size: 2.4rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+      .lead { color: var(--muted); font-size: 1.1rem; margin: 0 0 24px; max-width: 680px; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+      .btn { display: inline-block; padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border); color: var(--fg); text-decoration: none; font-weight: 600; }
+      .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+      h2 { font-size: 1.2rem; margin: 40px 0 16px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+      .card { display: block; padding: 16px; border-radius: 10px; background: var(--card); border: 1px solid var(--border); color: var(--fg); text-decoration: none; }
+      .card:hover { border-color: var(--accent); }
+      .card strong { display: block; margin-bottom: 4px; }
+      .card span { color: var(--muted); font-size: 0.93rem; }
+      img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+      code { background: var(--card); border: 1px solid var(--border); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+      footer { margin-top: 56px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 16px; }
+      footer a { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>human</h1>
+      <p class="lead">AI-powered 3D face detection and rotation tracking, face recognition, body pose, 3D hand and finger tracking, iris analysis, age, gender and emotion prediction, gaze tracking and gesture recognition. Runs fully in your browser; images and video never leave your device.</p>
+      <div class="actions">
+        <a class="btn primary" href="demo/index.html">Open the full demo</a>
+        <a class="btn" href="demo/typescript/index.html">Simple webcam demo</a>
+        <a class="btn" href="https://github.com/nimadorostkar/human">Source on GitHub</a>
+      </div>
+
+      <img src="assets/samples.jpg" alt="Examples of face, body and hand detection results" width="960" height="540" loading="lazy">
+
+      <h2>Demos</h2>
+      <div class="grid">
+        <a class="card" href="demo/index.html"><strong>Full</strong><span>Every capability with tunable options, webcam, video and images</span></a>
+        <a class="card" href="demo/typescript/index.html"><strong>Simple</strong><span>Annotated webcam demo in TypeScript</span></a>
+        <a class="card" href="demo/video/index.html"><strong>Embedded</strong><span>Tiny demo with code inside a single HTML file</span></a>
+        <a class="card" href="demo/facedetect/index.html"><strong>Face Detect</strong><span>Extract faces from images and inspect details</span></a>
+        <a class="card" href="demo/facematch/index.html"><strong>Face Match</strong><span>Face descriptors and similarity matching</span></a>
+        <a class="card" href="demo/faceid/index.html"><strong>Face ID</strong><span>Liveness checks, then match against faces stored locally</span></a>
+        <a class="card" href="demo/multithread/index.html"><strong>Multi-thread</strong><span>Each model runs in its own web worker</span></a>
+        <a class="card" href="demo/tracker/index.html"><strong>Tracker</strong><span>Track faces and bodies across frames</span></a>
+        <a class="card" href="samples/index.html"><strong>Gallery</strong><span>Processed sample images</span></a>
+      </div>
+
+      <h2>Use it in your app</h2>
+      <p><code>npm install @nimadorostkar/human</code> then <code>import { Human } from '@nimadorostkar/human';</code></p>
+      <p>See the <a href="typedoc/index.html">API reference</a> for every method and option.</p>
+
+      <footer>
+        Built by <a href="https://github.com/nimadorostkar">Nima Dorostkar</a>. MIT License.
+        Based on <a href="https://github.com/vladmandic/human">Human</a> by Vladimir Mandic.
+      </footer>
+    </main>
+  </body>
+</html>
