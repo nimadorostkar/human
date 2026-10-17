@@ -178,12 +178,17 @@ function panelText(name, result, faces, objects, version) {
   return lines;
 }
 
-function drawBadge(ctx, x, y, text, size) {
+function drawBadge(ctx, box, text, size, imageWidth, imageHeight, placed) {
   ctx.font = `bold ${size}px ${font}`;
   const pad = Math.round(size * 0.35);
   const width = ctx.measureText(text).width + 2 * pad;
   const height = size + 2 * pad;
-  const top = Math.max(0, y - height);
+  const x = Math.round(Math.min(Math.max(0, box[0]), imageWidth - width)); // keep badge inside the image
+  const spots = [box[1] - height - 2, box[1] + box[3] + 2, box[1] + 2]; // above the face, below it, or inside its top edge
+  const fits = (top) => top >= 0 && top + height <= imageHeight;
+  const free = (top) => !placed.some((p) => x < p.x + p.width && p.x < x + width && top < p.top + p.height && p.top < top + height);
+  const top = Math.round(spots.find((s) => fits(s) && free(s)) ?? spots.find(fits) ?? 0);
+  placed.push({ x, top, width, height });
   ctx.fillStyle = 'rgba(0, 0, 0, 0.78)';
   ctx.fillRect(x, top, width, height);
   ctx.fillStyle = accent;
@@ -201,6 +206,7 @@ async function analyze(human, faceHuman, file, outDir) {
   result.height = image.height;
   result.face = await detectFacesTiled(faceHuman, image, result.face);
   const objects = result.object.filter((o) => o.label !== 'person'); // people are already covered by face and body results
+  result.body = result.body.filter((b) => !result.face.some((f) => overlap(f.box, b.box) > 0.6 && b.box[3] < f.box[3])); // drop spurious poses found inside close-up faces
   const faces = result.face.map(faceSummary);
 
   // scale fonts and lines to image size so results are readable on both small and large photos
@@ -235,9 +241,11 @@ async function analyze(human, faceHuman, file, outDir) {
     fingerLabels: '',
     gestureLabels: '',
   });
+  const placed = [];
   for (const f of faces) {
     const gender = { male: 'M', female: 'F' }[f.gender] || '?';
-    drawBadge(ctx, Math.max(0, f.box[0]), Math.max(0, f.box[1] - 2), `#${f.id + 1}  ${gender} ${f.age}y  ${f.emotion}`, Math.max(12, Math.round(fontSize * 0.85)));
+    const size = Math.max(11, Math.min(Math.round(fontSize * 0.85), Math.round(f.box[2] * 0.2))); // smaller badges for small faces in group photos
+    drawBadge(ctx, f.box, `#${f.id + 1}  ${gender} ${f.age}y  ${f.emotion}`, size, image.width, image.height, placed);
   }
 
   ctx.fillStyle = '#111317';
