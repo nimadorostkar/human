@@ -58,7 +58,8 @@ The repository already ships a pre-built library in `dist/` and all models in `m
 | --- | --- |
 | `npm run serve` | Start the local dev server on ports 8000 (HTTP) and 8001 (HTTPS) |
 | `npm run dev` | Dev server plus file watching and incremental rebuilds |
-| `npm run build` | Full production build of `dist/`, `types/` and `typedoc/` |
+| `npm run compile` | Re-bundle `dist/` and the TypeScript demos with esbuild (works on any Node version) |
+| `npm run build` | Full production build of `dist/`, `types/` and `typedoc/` (needs `tfjs-node`, so Node 22 or older) |
 | `npm start` | Run the main Node.js demo (needs `tfjs-node`) |
 | `npm test` | Run the Node.js test suite (needs `tfjs-node`) |
 | `npm run lint` | Lint the sources |
