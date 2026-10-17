@@ -443,12 +443,3 @@ Build target for distributables is `JavaScript` [ECMAScript 2018](https://262.ec
 **Nima Dorostkar**  
 GitHub: [@nimadorostkar](https://github.com/nimadorostkar)  
 Email: <nimadorostkar97@gmail.com>
-
-## Acknowledgements
-
-`human` is based on the open-source [Human](https://github.com/vladmandic/human) library by Vladimir Mandic, released under the MIT License.  
-Thanks also to the authors of the underlying models; see the upstream [list of models and credits](https://github.com/vladmandic/human/wiki/Models).
-
-## License
-
-[MIT](LICENSE)
