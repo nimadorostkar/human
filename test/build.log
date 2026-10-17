@@ -123,3 +123,16 @@
 2026-10-17 23:28:09 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/svg+xml","size":13407,"url":"/assets/architecture.svg","remote":"::1"} 
 2026-10-17 23:28:09 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
 2026-10-17 23:28:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-18 00:19:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
+2026-10-18 00:19:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/png","size":142790,"url":"/assets/icon.png","remote":"::1"} 
+2026-10-18 00:19:17 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-18 00:19:32 [33mWARN: [39m HTTP: {"method":"GET","ver":"1.1","status":404,"url":"/.well-known/appspecific/com.chrome.devtools.json","remote":"::1"} 
+2026-10-18 00:19:33 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/octet-stream","size":3671732,"url":"/dist/human.esm.js.map","remote":"::1"} 
+2026-10-18 00:19:33 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
