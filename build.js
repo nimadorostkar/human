@@ -91,6 +91,7 @@ async function analyzeModels() {
       }
     }
   }
+  delete models[path.basename(modelsOut, '.json')]; // models.json itself is not a model
   fs.writeFileSync(modelsOut, JSON.stringify(models, null, 2));
   log.state('Models:', { count: Object.keys(models).length, totalSize });
 }

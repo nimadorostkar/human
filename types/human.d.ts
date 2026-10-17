@@ -8,7 +8,7 @@ import { Tensor4D } from '@tensorflow/tfjs-core';
 import { TensorLike } from '@tensorflow/tfjs-core';
 
 /** meta-function that performs draw for: canvas, face, body, hand */
-declare function all(inCanvas: AnyCanvas, result: Result, drawOptions?: Partial<DrawOptions>): Promise<[void, void, void, void, void] | null>;
+declare function all(inCanvas: AnyCanvas, result: Result, drawOptions?: Partial<DrawOptions>): Promise<null> | Promise<void[]>;
 
 /** Defines all possible canvas types */
 export declare type AnyCanvas = HTMLCanvasElement | OffscreenCanvas;

@@ -21,3 +21,23 @@
 2026-10-17 18:06:27 [35mSTATE:[39m Compile: {"name":"demo/typescript","format":"esm","platform":"browser","input":"demo/typescript/index.ts","output":"demo/typescript/index.js","files":1,"inputBytes":6391,"outputBytes":2954} 
 2026-10-17 18:06:27 [35mSTATE:[39m Compile: {"name":"demo/faceid","format":"esm","platform":"browser","input":"demo/faceid/index.ts","output":"demo/faceid/index.js","files":2,"inputBytes":17531,"outputBytes":9418} 
 2026-10-17 18:06:27 [35mSTATE:[39m Compile: {"name":"demo/tracker","format":"esm","platform":"browser","input":"demo/tracker/index.ts","output":"demo/tracker/index.js","files":2,"inputBytes":54372,"outputBytes":22782} 
+2026-10-17 18:07:00 [35mSTATE:[39m Copy: {"input":"node_modules/@vladmandic/tfjs/types/tfjs-core.d.ts","output":"types/tfjs-core.d.ts"} 
+2026-10-17 18:07:00 [35mSTATE:[39m Copy: {"input":"node_modules/@vladmandic/tfjs/types/tfjs.d.ts","output":"types/tfjs.esm.d.ts"} 
+2026-10-17 18:07:00 [35mSTATE:[39m Copy: {"input":"src/types/tsconfig.json","output":"types/tsconfig.json"} 
+2026-10-17 18:07:00 [35mSTATE:[39m Copy: {"input":"src/types/eslint.json","output":"types/.eslintrc.json"} 
+2026-10-17 18:07:00 [35mSTATE:[39m Copy: {"input":"src/types/tfjs.esm.d.ts","output":"dist/tfjs.esm.d.ts"} 
+2026-10-17 18:07:00 [35mSTATE:[39m Filter: {"input":"types/tfjs-core.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m API-Extractor: {"succeeeded":true,"errors":0,"warnings":0} 
+2026-10-17 18:07:04 [35mSTATE:[39m Filter: {"input":"types/human.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Write: {"output":"dist/human.esm-nobundle.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Write: {"output":"dist/human.esm.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Write: {"output":"dist/human.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Write: {"output":"dist/human.node-gpu.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Write: {"output":"dist/human.node.d.ts"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Write: {"output":"dist/human.node-wasm.d.ts"} 
+2026-10-17 18:07:04 [36mINFO: [39m Analyze models: {"folders":8,"result":"models/models.json"} 
+2026-10-17 18:07:04 [35mSTATE:[39m Models {"folder":"./models","models":11} 
+2026-10-17 18:07:04 [35mSTATE:[39m Models: {"count":58,"totalSize":27530157} 
+2026-10-17 18:07:04 [36mINFO: [39m Human Build complete... {"logFile":"test/build.log"} 
+2026-10-17 18:07:00 [35mSTATE:[39m Lint: {"locations":["**/*.json","src/**/*.ts","test/**/*.js","demo/**/*.js","**/*.md"],"files":149,"errors":0,"warnings":0} 
+2026-10-17 18:07:00 [36mINFO: [39m Done... 
