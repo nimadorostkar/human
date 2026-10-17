@@ -234,7 +234,7 @@
       .menu-file { width: 100%; justify-content: center; }
 
       /* performance monitor from helpers/gl-bench.js */
-      body #gl-bench { position: fixed; right: 16px; bottom: 84px; z-index: 9; }
+      body #gl-bench { position: fixed; right: 16px; top: calc(var(--topbar) + 16px); bottom: auto; z-index: 9; }
       body #gl-bench div { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(14px); padding: 2px 6px; margin: 0; }
       body #gl-bench text { font-family: var(--mono); }
       body #gl-bench rect { fill: rgba(255, 255, 255, 0.05); }
@@ -265,7 +265,7 @@
         .menu { left: 8px !important; right: 8px !important; top: auto !important; bottom: 80px; width: auto; max-width: none; max-height: 65vh; border-radius: 20px; }
         .menu.closed { transform: translateY(16px); }
         .results { bottom: 168px; }
-        body #gl-bench { bottom: 168px; }
+        body #gl-bench { top: calc(var(--topbar) + 12px); right: 12px; }
         .compare-image { width: 140px; }
         .compare-image canvas { width: 124px; height: 124px; }
       }

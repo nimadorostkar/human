@@ -377,12 +377,12 @@ async function drawResults(input) {
 
 // setup webcam
 let initialCameraAccess = true;
+// returns null when the camera is ready, otherwise an error message
 async function setupCamera() {
-  if (ui.busy) return null;
+  if (ui.busy) return 'busy';
   ui.busy = true;
   const video = document.getElementById('video');
   const canvas = document.getElementById('canvas');
-  const output = document.getElementById('log');
   if (ui.useWebRTC) {
     status('setting up webrtc connection');
     try {
@@ -400,12 +400,16 @@ async function setupCamera() {
   status('setting up camera');
   // setup webcam. note that navigator.mediaDevices requires that page is accessed via https
   if (!navigator.mediaDevices) {
-    msg = 'camera access not supported';
-    output.innerText += `\n${msg}`;
+    msg = window.isSecureContext ? 'camera access not supported' : 'camera needs https or localhost';
     log(msg);
     status(msg);
     ui.busy = false;
     return msg;
+  }
+  if (video.srcObject) { // release the previous camera before opening a new one, e.g. when switching front and back camera
+    for (const track of video.srcObject.getTracks()) track.stop();
+    cancelAnimationFrame(ui.detectThread);
+    ui.detectThread = null;
   }
   let stream;
   const constraints = {
@@ -431,7 +435,6 @@ async function setupCamera() {
     if (err.name === 'PermissionDeniedError' || err.name === 'NotAllowedError') msg = 'camera permission denied';
     else if (err.name === 'SourceUnavailableError') msg = 'camera not available';
     else msg = `camera error: ${err.message || err}`;
-    output.innerText += `\n${msg}`;
     status(msg);
     log('camera error:', err);
     ui.busy = false;
@@ -442,15 +445,14 @@ async function setupCamera() {
     if (initialCameraAccess) log('enumerated viable tracks:', tracks);
   } else {
     ui.busy = false;
+    status('no camera track');
     return 'no camera track';
   }
   const track = stream.getVideoTracks()[0];
   const settings = track.getSettings();
   if (initialCameraAccess) log('selected video source:', track, settings);
-  ui.camera = { name: track.label.toLowerCase(), width: settings.width, height: settings.height, facing: settings.facingMode === 'user' ? 'front' : 'back' };
+  ui.camera = { name: track.label.toLowerCase(), width: settings.width, height: settings.height, facing: settings.facingMode === 'environment' ? 'back' : 'front' };
   initialCameraAccess = false;
-
-  if (!stream) return 'camera stream empty';
 
   const ready = new Promise((resolve) => { (video.onloadeddata = () => resolve(true)); });
   video.srcObject = stream;
@@ -459,9 +461,13 @@ async function setupCamera() {
   canvas.height = video.videoHeight;
   ui.menuWidth.setValue(video.videoWidth);
   ui.menuHeight.setValue(video.videoHeight);
-  if (live || ui.autoPlay) await videoPlay();
-  if ((live || ui.autoPlay) && !ui.detectThread) runHumanDetect(video, canvas); // eslint-disable-line no-use-before-define
-  return 'camera stream ready';
+  ui.busy = false;
+  log('camera stream ready');
+  if (live || ui.autoPlay) {
+    await videoPlay();
+    runHumanDetect(video, canvas); // eslint-disable-line no-use-before-define
+  }
+  return null;
 }
 
 function initPerfMonitor() {
@@ -659,8 +665,13 @@ async function detectVideo() {
   cancelAnimationFrame(ui.detectThread);
   if (isLive(video) && !video.paused) {
     await videoPause();
+  } else if (video.srcObject && video.srcObject.getVideoTracks()[0]?.readyState === 'live') { // resume the open camera instead of reopening it
+    closeMenus(null);
+    await videoPlay();
+    runHumanDetect(video, canvas);
   } else {
     const cameraError = await setupCamera();
+    if (cameraError === 'busy') return; // camera is still starting from a previous click
     if (!cameraError) {
       status('starting detection');
       closeMenus(null);
@@ -820,7 +831,6 @@ async function resize() {
   log('resize');
   closeMenus(null);
   positionMenus();
-  if (document.getElementById('video').srcObject) await setupCamera(); // only re-init camera once the user started it, so the page does not ask for camera access on load
   window.onresize = resize;
 }
 
