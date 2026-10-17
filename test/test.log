@@ -1,0 +1,277 @@
+2025-08-26 11:39:38 [36mINFO: [39m @vladmandic/human version 3.3.6 
+2025-08-26 11:39:38 [36mINFO: [39m User: vlado Platform: linux Arch: x64 Node: v22.13.1 
+2025-08-26 11:39:38 [36mINFO: [39m demos: [{"cmd":"../demo/nodejs/node.js","args":[]},{"cmd":"../demo/nodejs/node-simple.js","args":[]},{"cmd":"../demo/nodejs/node-event.js","args":["samples/in/ai-body.jpg"]},{"cmd":"../demo/nodejs/node-similarity.js","args":["samples/in/ai-face.jpg","samples/in/ai-upper.jpg"]},{"cmd":"../demo/nodejs/node-canvas.js","args":["samples/in/ai-body.jpg","samples/out/ai-body.jpg"]},{"cmd":"../demo/nodejs/process-folder.js","args":["samples"]},{"cmd":"../demo/multithread/node-multiprocess.js","args":[]},{"cmd":"../demo/facematch/node-match.js","args":[]},{"cmd":"../demo/nodejs/node-bench.js","args":[]},{"cmd":"../test/test-node-emotion.js","args":[]}] 
+2025-08-26 11:39:38 [36mINFO: [39m {"cmd":"../demo/nodejs/node.js","args":[]} start 
+2025-08-26 11:39:39 [36mINFO: [39m {"cmd":"../demo/nodejs/node-simple.js","args":[]} start 
+2025-08-26 11:39:40 [36mINFO: [39m {"cmd":"../demo/nodejs/node-event.js","args":["samples/in/ai-body.jpg"]} start 
+2025-08-26 11:39:40 [36mINFO: [39m {"cmd":"../demo/nodejs/node-similarity.js","args":["samples/in/ai-face.jpg","samples/in/ai-upper.jpg"]} start 
+2025-08-26 11:39:41 [36mINFO: [39m {"cmd":"../demo/nodejs/node-canvas.js","args":["samples/in/ai-body.jpg","samples/out/ai-body.jpg"]} start 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: node:internal/modules/cjs/loader:1247 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:   throw err; 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:   ^ 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: Error: Cannot find module '../build/Release/canvas.node' 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: Require stack: 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: - /home/vlado/dev/human/demo/nodejs/node-canvas.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Function._load (node:internal/modules/cjs/loader:1070:27) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Module.require (node:internal/modules/cjs/loader:1335:12) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Object.<anonymous> (/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1562:14) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Object..js (node:internal/modules/cjs/loader:1699:10) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at Module.load (node:internal/modules/cjs/loader:1313:32) { 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:   code: 'MODULE_NOT_FOUND', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:   requireStack: [ 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     '/home/vlado/dev/human/demo/nodejs/node-canvas.js' 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:   ] 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: Thrown at: 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at node:internal/modules/cjs/loader:1244:15 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at node:internal/modules/cjs/loader:1070:27 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at node:internal/modules/cjs/loader:1335:12 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at node:internal/modules/cjs/loader:1562:14 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at node:internal/modules/cjs/loader:1699:10 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr:     at node:internal/modules/cjs/loader:1313:32 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/node-canvas.js stderr: Node.js v22.13.1 
+2025-08-26 11:39:41 [36mINFO: [39m {"cmd":"../demo/nodejs/process-folder.js","args":["samples"]} start 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: node:internal/modules/cjs/loader:1247 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:   throw err; 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:   ^ 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: Error: Cannot find module '../build/Release/canvas.node' 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: Require stack: 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: - /home/vlado/dev/human/demo/nodejs/process-folder.js 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Function._load (node:internal/modules/cjs/loader:1070:27) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Module.require (node:internal/modules/cjs/loader:1335:12) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Object.<anonymous> (/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1562:14) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Object..js (node:internal/modules/cjs/loader:1699:10) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at Module.load (node:internal/modules/cjs/loader:1313:32) { 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:   code: 'MODULE_NOT_FOUND', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:   requireStack: [ 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js', 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     '/home/vlado/dev/human/demo/nodejs/process-folder.js' 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:   ] 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: Thrown at: 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1244:15 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1070:27 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1335:12 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1562:14 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1699:10 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr:     at node:internal/modules/cjs/loader:1313:32 
+2025-08-26 11:39:41 [33mWARN: [39m ../demo/nodejs/process-folder.js stderr: Node.js v22.13.1 
+2025-08-26 11:39:41 [36mINFO: [39m {"cmd":"../demo/multithread/node-multiprocess.js","args":[]} start 
+2025-08-26 11:39:54 [36mINFO: [39m {"cmd":"../demo/facematch/node-match.js","args":[]} start 
+2025-08-26 11:39:55 [36mINFO: [39m {"cmd":"../demo/nodejs/node-bench.js","args":[]} start 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: node:internal/modules/cjs/loader:1247 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:   throw err; 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:   ^ 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Error: Cannot find module '../build/Release/canvas.node' 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Require stack: 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: - /home/vlado/dev/human/demo/nodejs/node-bench.js 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Function._load (node:internal/modules/cjs/loader:1070:27) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Module.require (node:internal/modules/cjs/loader:1335:12) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Object.<anonymous> (/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1562:14) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Object..js (node:internal/modules/cjs/loader:1699:10) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at Module.load (node:internal/modules/cjs/loader:1313:32) { 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:   code: 'MODULE_NOT_FOUND', 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:   requireStack: [ 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js', 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js', 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js', 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     '/home/vlado/dev/human/demo/nodejs/node-bench.js' 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:   ] 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Thrown at: 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1244:15 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1070:27 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1335:12 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1562:14 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1699:10 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr:     at node:internal/modules/cjs/loader:1313:32 
+2025-08-26 11:39:55 [33mWARN: [39m ../demo/nodejs/node-bench.js stderr: Node.js v22.13.1 
+2025-08-26 11:39:55 [36mINFO: [39m {"cmd":"../test/test-node-emotion.js","args":[]} start 
+2025-08-26 11:40:01 [36mINFO: [39m tests: ["test-node-load.js","test-node-gear.js","test-backend-node.js","test-backend-node-gpu.js","test-backend-node-wasm.js"] 
+2025-08-26 11:40:01 [36mINFO: [39m 
+2025-08-26 11:40:01 [36mINFO: [39m test-node-load.js start 
+2025-08-26 11:40:01 [36mINFO: [39m test-node-load.js load start {"human":"3.3.6","tf":"4.22.0","progress":0} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":0,"progress":0} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":10,"progress":0} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":23,"progress":0.12865823126207815} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":33,"progress":0.2204080722078057} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":56,"progress":0.4726970548784964} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":68,"progress":0.68355493315821} 
+2025-08-26 11:40:01 [35mSTATE:[39m test-node-load.js passed {"progress":1} 
+2025-08-26 11:40:01 [36mINFO: [39m test-node-load.js load final {"progress":1} 
+2025-08-26 11:40:01 [32mDATA: [39m test-node-load.js load interval {"elapsed":426,"progress":1} 
+2025-08-26 11:40:01 [36mINFO: [39m 
+2025-08-26 11:40:01 [36mINFO: [39m test-node-gear.js start 
+2025-08-26 11:40:02 [32mDATA: [39m test-node-gear.js input: ["samples/in/ai-face.jpg"] 
+2025-08-26 11:40:02 [35mSTATE:[39m test-node-gear.js passed: gear faceres samples/in/ai-face.jpg 
+2025-08-26 11:40:02 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"faceres","image":"samples/in/ai-face.jpg","age":23.6,"gender":"female","genderScore":0.95,"emotion":[]} 
+2025-08-26 11:40:03 [35mSTATE:[39m test-node-gear.js passed: gear gear samples/in/ai-face.jpg 
+2025-08-26 11:40:03 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"gear","image":"samples/in/ai-face.jpg","age":25.2,"gender":"female","genderScore":0.7,"race":[{"score":0.96,"race":"white"}],"emotion":[]} 
+2025-08-26 11:40:03 [35mSTATE:[39m test-node-gear.js passed: gear ssrnet samples/in/ai-face.jpg 
+2025-08-26 11:40:03 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"ssrnet","image":"samples/in/ai-face.jpg","age":22.6,"gender":"female","genderScore":0.98,"emotion":[]} 
+2025-08-26 11:40:03 [35mSTATE:[39m test-node-gear.js passed: gear ssrnet samples/in/ai-face.jpg 
+2025-08-26 11:40:03 [32mDATA: [39m test-node-gear.js results {"face":0,"model":"ssrnet","image":"samples/in/ai-face.jpg","age":22.6,"gender":"male","emotion":[]} 
+2025-08-26 11:40:03 [36mINFO: [39m 
+2025-08-26 11:40:03 [36mINFO: [39m test-backend-node.js start 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: node:internal/modules/cjs/loader:1247 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:   throw err; 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:   ^ 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: Error: Cannot find module '../build/Release/canvas.node' 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: Require stack: 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: - /home/vlado/dev/human/test/test-node-main.js 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: - /home/vlado/dev/human/test/test-backend-node.js 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Function._load (node:internal/modules/cjs/loader:1070:27) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Module.require (node:internal/modules/cjs/loader:1335:12) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Object.<anonymous> (/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1562:14) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Object..js (node:internal/modules/cjs/loader:1699:10) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at Module.load (node:internal/modules/cjs/loader:1313:32) { 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:   code: 'MODULE_NOT_FOUND', 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:   requireStack: [ 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js', 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js', 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js', 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     '/home/vlado/dev/human/test/test-node-main.js', 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     '/home/vlado/dev/human/test/test-backend-node.js' 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:   ] 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: Thrown at: 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at node:internal/modules/cjs/loader:1244:15 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at node:internal/modules/cjs/loader:1070:27 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at node:internal/modules/cjs/loader:1335:12 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at node:internal/modules/cjs/loader:1562:14 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at node:internal/modules/cjs/loader:1699:10 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr:     at node:internal/modules/cjs/loader:1313:32 
+2025-08-26 11:40:03 [33mWARN: [39m test-backend-node.js stderr: Node.js v22.13.1 
+2025-08-26 11:40:03 [36mINFO: [39m 
+2025-08-26 11:40:03 [36mINFO: [39m test-backend-node-gpu.js start 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr: /home/vlado/dev/human/node_modules/.pnpm/@tensorflow+tfjs-node-gpu@4.22.0_seedrandom@3.0.5/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     throw new Error("The Node.js native addon module (tfjs_binding.node) can not " + 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     ^ 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr: Error: The Node.js native addon module (tfjs_binding.node) can not be found at path: /home/vlado/dev/human/node_modules/.pnpm/@tensorflow+tfjs-node-gpu@4.22.0_seedrandom@3.0.5/node_modules/@tensorflow/tfjs-node-gpu/lib/napi-v8/tfjs_binding.node.  
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr: Please run command 'npm rebuild @tensorflow/tfjs-node-gpu --build-addon-from-source' to rebuild the native addon module.  
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr: If you have problem with building the addon module, please check https://github.com/tensorflow/tfjs/blob/master/tfjs-node/WINDOWS_TROUBLESHOOTING.md or file an issue. 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Object.<anonymous> (/home/vlado/dev/human/node_modules/.pnpm/@tensorflow+tfjs-node-gpu@4.22.0_seedrandom@3.0.5/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61:11) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1562:14) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Object..js (node:internal/modules/cjs/loader:1699:10) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Module.load (node:internal/modules/cjs/loader:1313:32) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Function._load (node:internal/modules/cjs/loader:1123:12) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at Module.require (node:internal/modules/cjs/loader:1335:12) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /home/vlado/dev/human/dist/human.node-gpu.js:7:1670 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr: Thrown at: 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /home/vlado/dev/human/node_modules/.pnpm/@tensorflow+tfjs-node-gpu@4.22.0_seedrandom@3.0.5/node_modules/@tensorflow/tfjs-node-gpu/dist/index.js:61:11 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1562:14 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1699:10 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1313:32 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1123:12 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at node:internal/modules/cjs/loader:1335:12 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr:     at /home/vlado/dev/human/dist/human.node-gpu.js:7:1670 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-gpu.js stderr: Node.js v22.13.1 
+2025-08-26 11:40:04 [36mINFO: [39m 
+2025-08-26 11:40:04 [36mINFO: [39m test-backend-node-wasm.js start 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: node:internal/modules/cjs/loader:1247 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:   throw err; 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:   ^ 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: Error: Cannot find module '../build/Release/canvas.node' 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: Require stack: 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: - /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: - /home/vlado/dev/human/test/test-backend-node-wasm.js 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Function._load (node:internal/modules/cjs/loader:1070:27) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Module.require (node:internal/modules/cjs/loader:1335:12) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Object.<anonymous> (/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Module._compile (node:internal/modules/cjs/loader:1562:14) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Object..js (node:internal/modules/cjs/loader:1699:10) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at Module.load (node:internal/modules/cjs/loader:1313:32) { 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:   code: 'MODULE_NOT_FOUND', 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:   requireStack: [ 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js', 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/canvas.js', 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     '/home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/index.js', 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     '/home/vlado/dev/human/test/test-backend-node-wasm.js' 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:   ] 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: Thrown at: 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at node:internal/modules/cjs/loader:1244:15 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at node:internal/modules/cjs/loader:1070:27 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at traceSync (node:diagnostics_channel:322:14) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at wrapModuleLoad (node:internal/modules/cjs/loader:217:24) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at node:internal/modules/cjs/loader:1335:12 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at require (node:internal/modules/helpers:136:16) 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at /home/vlado/dev/human/node_modules/.pnpm/canvas@3.2.0/node_modules/canvas/lib/bindings.js:3:18 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at node:internal/modules/cjs/loader:1562:14 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at node:internal/modules/cjs/loader:1699:10 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr:     at node:internal/modules/cjs/loader:1313:32 
+2025-08-26 11:40:04 [33mWARN: [39m test-backend-node-wasm.js stderr: Node.js v22.13.1 
+2025-08-26 11:40:04 [35mSTATE:[39m all tests complete 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/node.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/node-simple.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/node-event.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/node-similarity.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/node-canvas.js","passed":1,"failed":"critical"} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/process-folder.js","passed":1,"failed":"critical"} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/multithread/node-multiprocess.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/facematch/node-match.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../demo/nodejs/node-bench.js","passed":1,"failed":"critical"} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"../test/test-node-emotion.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"test-node-load.js","passed":1,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m   status {"test":"test-node-gear.js","passed":4,"failed":0} 
+2025-08-26 11:40:04 [36mINFO: [39m failures {"count":0} 
