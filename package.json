@@ -1,6 +1,6 @@
 {
   "name": "@nimadorostkar/human",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Human by Nima Dorostkar: AI-powered 3D Face Detection & Rotation Tracking, Face Description & Recognition, Body Pose Tracking, 3D Hand & Finger Tracking, Iris Analysis, Age & Gender & Emotion Prediction, Gaze Tracking, Gesture Recognition",
   "author": "Nima Dorostkar <nimadorostkar97@gmail.com>",
   "contributors": [
