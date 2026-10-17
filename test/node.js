@@ -40,7 +40,11 @@ const ignoreMessages = [
   'cpu_allocator_impl.cc',
   '--trace-warnings',
   'ExperimentalWarning',
+  'oneDNN', // tensorflow cpu optimization notice
+  'Unable to revert mtime', // fontconfig cache notice on ci runners
 ];
+
+process.env.TF_CPP_MIN_LOG_LEVEL = process.env.TF_CPP_MIN_LOG_LEVEL || '2'; // hide tensorflow info and warning logs in child processes
 
 const failedMessages = [];
 
@@ -61,8 +65,13 @@ function logMessage(test, data) {
   }
 }
 
-function logStdIO(ok, test, buffer) {
-  const lines = buffer.toString().split(/\r\n|\n\r|\n|\r/);
+const partialLines = {};
+
+function logStdIO(ok, test, buffer, flush = false) {
+  // output can arrive split mid-line, so only complete lines are checked against ignoreMessages
+  const key = `${test}:${ok}`;
+  const lines = ((partialLines[key] || '') + buffer.toString()).split(/\r\n|\n\r|\n|\r/);
+  partialLines[key] = flush ? '' : lines.pop();
   const filtered = lines.filter((line) => {
     for (const ignoreString of ignoreMessages) {
       if (line.includes(ignoreString)) return false;
@@ -87,7 +96,11 @@ async function runTest(test) {
     const child = fork(path.join(__dirname, test), [], { silent: true });
     child.on('message', (data) => logMessage(test, data));
     child.on('error', (data) => log.error(test, ':', data.message || data));
-    child.on('close', (code) => resolve(code));
+    child.on('close', (code) => {
+      logStdIO(true, test, '', true); // flush partial lines
+      logStdIO(false, test, '', true);
+      resolve(code);
+    });
     child.stdout?.on('data', (data) => logStdIO(true, test, data));
     child.stderr?.on('data', (data) => logStdIO(false, test, data));
   });
@@ -105,6 +118,7 @@ async function runDemo(demo) {
       log.error(demo.cmd, ':', data.message || data);
     });
     child.on('close', (code) => {
+      logStdIO(false, demo.cmd, '', true); // flush partial lines
       status[demo.cmd].passed++;
       resolve(code);
     });
