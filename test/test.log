@@ -551,3 +551,55 @@
 2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js start face similarity 
 2026-10-17 18:14:13 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34697856} 
 2026-10-17 18:14:13 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:15 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:15 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-face.jpg face similarity 
+2026-10-17 18:14:15 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 6 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.82,"class":"person"} {"score":0.47,"keypoints":3} 
+2026-10-17 18:14:15 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 2223 
+2026-10-17 18:14:15 [35mSTATE:[39m test-backend-node-wasm.js start face similarity 
+2026-10-17 18:14:17 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:17 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:19 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:19 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg face similarity 
+2026-10-17 18:14:19 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:19 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1712 
+2026-10-17 18:14:19 [35mSTATE:[39m test-backend-node-wasm.js start face similarity 
+2026-10-17 18:14:19 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-upper.jpg [1,720,688,3] {"checksum":151155104} 
+2026-10-17 18:14:19 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:21 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:21 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-upper.jpg face similarity 
+2026-10-17 18:14:21 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 0 gesture: 4 object: 1 person: 1 {"score":1,"age":23.5,"gender":"female"} {"score":0.71,"class":"person"} {"score":0.75,"keypoints":7} 
+2026-10-17 18:14:21 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1561 
+2026-10-17 18:14:21 [35mSTATE:[39m test-backend-node-wasm.js passed: face descriptor 
+2026-10-17 18:14:21 [35mSTATE:[39m test-backend-node-wasm.js passed: face similarity {"similarity":[1,0.43,0.57],"descriptors":[1024,1024,1024]} 
+2026-10-17 18:14:21 [36mINFO: [39m test-backend-node-wasm.js test object 
+2026-10-17 18:14:21 [35mSTATE:[39m test-backend-node-wasm.js start object 
+2026-10-17 18:14:22 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:22 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:24 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:24 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg object 
+2026-10-17 18:14:24 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:24 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1524 
+2026-10-17 18:14:24 [35mSTATE:[39m test-backend-node-wasm.js passed: centernet 
+2026-10-17 18:14:24 [35mSTATE:[39m test-backend-node-wasm.js start object 
+2026-10-17 18:14:26 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:26 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:28 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:28 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg object 
+2026-10-17 18:14:28 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 3 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.86,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:28 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1716 
+2026-10-17 18:14:28 [35mSTATE:[39m test-backend-node-wasm.js passed: nanodet 
+2026-10-17 18:14:28 [36mINFO: [39m test-backend-node-wasm.js test sensitive 
+2026-10-17 18:14:28 [35mSTATE:[39m test-backend-node-wasm.js start sensitive 
+2026-10-17 18:14:32 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:32 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg sensitive 
+2026-10-17 18:14:33 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:33 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1275 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: sensitive result match 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: sensitive face result match 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: sensitive face emotion result [{"score":0.48,"emotion":"angry"},{"score":0.31,"emotion":"fear"},{"score":0.11,"emotion":"neutral"}] 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: sensitive body result match 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: sensitive hand result match 
+2026-10-17 18:14:33 [36mINFO: [39m test-backend-node-wasm.js test body 
+2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js start blazepose 
