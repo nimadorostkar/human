@@ -535,3 +535,19 @@
 2026-10-17 18:14:02 [35mSTATE:[39m test-backend-node-wasm.js passed: default result face match 1 female 0.97 
 2026-10-17 18:14:02 [36mINFO: [39m test-backend-node-wasm.js test sync 
 2026-10-17 18:14:02 [35mSTATE:[39m test-backend-node-wasm.js start sync 
+2026-10-17 18:14:08 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:08 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg sync 
+2026-10-17 18:14:10 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:10 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 2357 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js passed: default sync 1 female 0.97 
+2026-10-17 18:14:10 [36mINFO: [39m test-backend-node-wasm.js test: image process 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34697856} 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js passed: image input null [1,256,256,3] 
+2026-10-17 18:14:10 [36mINFO: [39m test-backend-node-wasm.js test: image null 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js passed: invalid input could not convert input to tensor 
+2026-10-17 18:14:10 [36mINFO: [39m test-backend-node-wasm.js test face similarity 
+2026-10-17 18:14:10 [35mSTATE:[39m test-backend-node-wasm.js start face similarity 
+2026-10-17 18:14:13 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34697856} 
+2026-10-17 18:14:13 [35mSTATE:[39m test-backend-node-wasm.js event: image 
