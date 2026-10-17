@@ -33351,7 +33351,6 @@ __export(models_exports, {
   meet: () => meet,
   mobileface: () => mobileface,
   mobilefacenet: () => mobilefacenet,
-  models: () => models,
   "movenet-lightning": () => movenet_lightning,
   "movenet-multipose": () => movenet_multipose,
   "movenet-thunder": () => movenet_thunder,
@@ -33374,7 +33373,6 @@ var handlandmark_lite = 2023432;
 var handtrack = 2964837;
 var iris = 2599092;
 var liveness = 592976;
-var models = 0;
 var movenet_lightning = 4650216;
 var affectnet_mobilenet = 6920630;
 var age = 161240;
@@ -33433,7 +33431,6 @@ var models_default = {
   handtrack,
   iris,
   liveness,
-  models,
   "movenet-lightning": movenet_lightning,
   "affectnet-mobilenet": affectnet_mobilenet,
   age,
@@ -44099,7 +44096,7 @@ async function loadSkeleton(config3) {
 }
 
 // src/hand/handtrack.ts
-var models2 = [null, null];
+var models = [null, null];
 var modelOutputNodes = ["StatefulPartitionedCall/Postprocessor/Slice", "StatefulPartitionedCall/Postprocessor/ExpandDims_1"];
 var inputSize7 = [[0, 0], [0, 0]];
 var classes = ["hand", "fist", "pinch", "point", "face", "tip", "pinchtip"];
@@ -44133,37 +44130,37 @@ var fingerMap = {
 };
 async function loadDetect3(config3) {
   var _a;
-  if (env.initial) models2[0] = null;
-  if (!models2[0]) {
+  if (env.initial) models[0] = null;
+  if (!models[0]) {
     fakeOps(["tensorlistreserve", "enter", "tensorlistfromtensor", "merge", "loopcond", "switch", "exit", "tensorliststack", "nextiteration", "tensorlistsetitem", "tensorlistgetitem", "reciprocal", "shape", "split", "where"], config3);
-    models2[0] = await loadModel((_a = config3.hand.detector) == null ? void 0 : _a.modelPath);
-    const inputs = models2[0]["executor"] ? Object.values(models2[0].modelSignature["inputs"]) : void 0;
+    models[0] = await loadModel((_a = config3.hand.detector) == null ? void 0 : _a.modelPath);
+    const inputs = models[0]["executor"] ? Object.values(models[0].modelSignature["inputs"]) : void 0;
     inputSize7[0][0] = Array.isArray(inputs) ? parseInt(inputs[0].tensorShape.dim[1].size) : 0;
     inputSize7[0][1] = Array.isArray(inputs) ? parseInt(inputs[0].tensorShape.dim[2].size) : 0;
-  } else if (config3.debug) log("cached model:", models2[0]["modelUrl"]);
-  return models2[0];
+  } else if (config3.debug) log("cached model:", models[0]["modelUrl"]);
+  return models[0];
 }
 async function loadSkeleton2(config3) {
   var _a;
-  if (env.initial) models2[1] = null;
-  if (!models2[1]) {
-    models2[1] = await loadModel((_a = config3.hand.skeleton) == null ? void 0 : _a.modelPath);
-    const inputs = models2[1]["executor"] ? Object.values(models2[1].modelSignature["inputs"]) : void 0;
+  if (env.initial) models[1] = null;
+  if (!models[1]) {
+    models[1] = await loadModel((_a = config3.hand.skeleton) == null ? void 0 : _a.modelPath);
+    const inputs = models[1]["executor"] ? Object.values(models[1].modelSignature["inputs"]) : void 0;
     inputSize7[1][0] = Array.isArray(inputs) ? parseInt(inputs[0].tensorShape.dim[1].size) : 0;
     inputSize7[1][1] = Array.isArray(inputs) ? parseInt(inputs[0].tensorShape.dim[2].size) : 0;
-  } else if (config3.debug) log("cached model:", models2[1]["modelUrl"]);
-  return models2[1];
+  } else if (config3.debug) log("cached model:", models[1]["modelUrl"]);
+  return models[1];
 }
 async function detectHands(input, config3) {
   const hands = [];
-  if (!input || !models2[0]) return hands;
+  if (!input || !models[0]) return hands;
   const t10 = {};
   const ratio2 = (input.shape[2] || 1) / (input.shape[1] || 1);
   const height = Math.min(Math.round((input.shape[1] || 0) / 8) * 8, maxDetectorResolution);
   const width = Math.round(height * ratio2 / 8) * 8;
   t10.resize = eX.resizeBilinear(input, [height, width]);
   t10.cast = Ue(t10.resize, "int32");
-  [t10.rawScores, t10.rawBoxes] = await models2[0].executeAsync(t10.cast, modelOutputNodes);
+  [t10.rawScores, t10.rawBoxes] = await models[0].executeAsync(t10.cast, modelOutputNodes);
   t10.boxes = cc(t10.rawBoxes, [0, 2]);
   t10.scores = cc(t10.rawScores, [0]);
   const classScores = fo(t10.scores, 1);
@@ -44209,12 +44206,12 @@ async function detectFingers(input, h, config3) {
     landmarks: {},
     annotations: {}
   };
-  if (input && models2[1] && config3.hand.landmarks && h.score > (config3.hand.minConfidence || 0)) {
+  if (input && models[1] && config3.hand.landmarks && h.score > (config3.hand.minConfidence || 0)) {
     const t10 = {};
     const boxCrop = [h.boxRaw[1], h.boxRaw[0], h.boxRaw[3] + h.boxRaw[1], h.boxRaw[2] + h.boxRaw[0]];
     t10.crop = eX.cropAndResize(input, [boxCrop], [0], [inputSize7[1][0], inputSize7[1][1]], "bilinear");
     t10.div = je(t10.crop, constants.tf255);
-    [t10.score, t10.keypoints] = models2[1].execute(t10.div, ["Identity_1", "Identity"]);
+    [t10.score, t10.keypoints] = models[1].execute(t10.div, ["Identity_1", "Identity"]);
     const rawScore = (await t10.score.data())[0];
     const score = (100 - Math.trunc(100 / (1 + Math.exp(rawScore)))) / 100;
     if (score >= (config3.hand.minConfidence || 0)) {
@@ -44235,7 +44232,7 @@ async function detectFingers(input, h, config3) {
 }
 async function predict15(input, config3) {
   var _a, _b;
-  if (!((_a = models2[0]) == null ? void 0 : _a["executor"]) || !((_b = models2[1]) == null ? void 0 : _b["executor"]) || !models2[0].inputs[0].shape || !models2[1].inputs[0].shape) return [];
+  if (!((_a = models[0]) == null ? void 0 : _a["executor"]) || !((_b = models[1]) == null ? void 0 : _b["executor"]) || !models[0].inputs[0].shape || !models[1].inputs[0].shape) return [];
   outputSize = [input.shape[2] || 0, input.shape[1] || 0];
   skipped13++;
   const skipTime = (config3.hand.skipTime || 0) > now() - lastTime14;
@@ -45448,17 +45445,17 @@ var Models = class {
     await Promise.all(pending);
   }
   list() {
-    const models3 = Object.keys(this.models).map((model23) => {
+    const models2 = Object.keys(this.models).map((model23) => {
       var _a;
       return { name: model23, loaded: this.models[model23] !== null, size: 0, url: this.models[model23] ? (_a = this.models[model23]) == null ? void 0 : _a["modelUrl"] : null };
     });
-    for (const m of models3) {
+    for (const m of models2) {
       const stats = Object.keys(modelStats).find((s) => s.startsWith(m.name));
       if (!stats) continue;
       m.size = modelStats[stats].sizeLoadedWeights;
       m.url = modelStats[stats].url;
     }
-    return models3;
+    return models2;
   }
   loaded() {
     const list = this.list();

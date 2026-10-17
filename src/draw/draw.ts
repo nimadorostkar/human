@@ -79,7 +79,7 @@ export async function tensor(input: Tensor2D, output: HTMLCanvasElement) {
 }
 
 /** meta-function that performs draw for: canvas, face, body, hand */
-export function all(inCanvas: AnyCanvas, result: Result, drawOptions?: Partial<DrawOptions>): Promise<void[] | null> { // returns a promise to keep the public api stable
+export function all(inCanvas: AnyCanvas, result: Result, drawOptions?: Partial<DrawOptions>) { // returns a promise to keep the public api stable
   if (!result?.performance || !inCanvas) return Promise.resolve(null);
   const timeStamp = now();
   const localOptions = mergeDeep(options, drawOptions);
