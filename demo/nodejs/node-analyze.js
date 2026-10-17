@@ -38,7 +38,7 @@ const config = {
   cacheSensitivity: 0,
   face: faceConfig,
   body: { enabled: true, maxDetected: 30, minConfidence: 0.2, modelPath: 'https://vladmandic.github.io/human-models/models/movenet-multipose.json' }, // multi-person pose model is not bundled locally
-  hand: { enabled: true, maxDetected: 30, minConfidence: 0.5 },
+  hand: { enabled: true, maxDetected: 30, minConfidence: 0.6 },
   object: { enabled: true, maxDetected: 20, minConfidence: 0.4 },
   gesture: { enabled: true },
   segmentation: { enabled: false },
@@ -206,6 +206,7 @@ async function analyze(human, faceHuman, file, outDir) {
   result.height = image.height;
   result.face = await detectFacesTiled(faceHuman, image, result.face);
   const objects = result.object.filter((o) => o.label !== 'person'); // people are already covered by face and body results
+  result.hand = result.hand.filter((h) => !result.face.some((f) => overlap(f.box, h.box) > 0.5)); // hand detector can fire on faces in group photos
   result.body = result.body.filter((b) => !result.face.some((f) => overlap(f.box, b.box) > 0.6 && b.box[3] < f.box[3])); // drop spurious poses found inside close-up faces
   const faces = result.face.map(faceSummary);
 
