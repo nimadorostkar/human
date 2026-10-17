@@ -1,0 +1,19 @@
+2026-10-17 18:53:55 [32mDATA: [39m Build {"name":"@nimadorostkar/human","version":"3.0.0"} 
+2026-10-17 18:53:55 [36mINFO: [39m Application: {"name":"@nimadorostkar/human","version":"3.0.0"} 
+2026-10-17 18:53:55 [36mINFO: [39m Environment: {"profile":"production","config":".build.json","package":"package.json","tsconfig":true,"eslintrc":true,"git":true} 
+2026-10-17 18:53:55 [36mINFO: [39m Toolchain: {"build":"0.10.3","esbuild":"0.25.12","typescript":"5.9.2","typedoc":"0.28.11","eslint":"8.57.0"} 
+2026-10-17 18:53:55 [36mINFO: [39m Build: {"profile":"production","steps":["clean","compile","typings","typedoc","lint"]} 
+2026-10-17 18:53:55 [35mSTATE:[39m Clean: {"locations":["dist/*","types/*","typedoc/*"]} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"tfjs/browser/version","format":"esm","platform":"browser","input":"tfjs/tf-version.ts","output":"dist/tfjs.version.js","files":1,"inputBytes":1289,"outputBytes":379} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"tfjs/nodejs/cpu","format":"cjs","platform":"node","input":"tfjs/tf-node.ts","output":"dist/tfjs.esm.js","files":2,"inputBytes":587,"outputBytes":978} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"human/nodejs/cpu","format":"cjs","platform":"node","input":"src/human.ts","output":"dist/human.node.js","files":80,"inputBytes":680414,"outputBytes":321854} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"tfjs/nodejs/gpu","format":"cjs","platform":"node","input":"tfjs/tf-node-gpu.ts","output":"dist/tfjs.esm.js","files":2,"inputBytes":595,"outputBytes":986} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"human/nodejs/gpu","format":"cjs","platform":"node","input":"src/human.ts","output":"dist/human.node-gpu.js","files":80,"inputBytes":680422,"outputBytes":321858} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"tfjs/nodejs/wasm","format":"cjs","platform":"node","input":"tfjs/tf-node-wasm.ts","output":"dist/tfjs.esm.js","files":2,"inputBytes":683,"outputBytes":2024} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"human/nodejs/wasm","format":"cjs","platform":"node","input":"src/human.ts","output":"dist/human.node-wasm.js","files":80,"inputBytes":681460,"outputBytes":321969} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"tfjs/browser/esm/nobundle","format":"esm","platform":"browser","input":"tfjs/tf-browser.ts","output":"dist/tfjs.esm.js","files":2,"inputBytes":1424,"outputBytes":711} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"human/browser/esm/nobundle","format":"esm","platform":"browser","input":"src/human.ts","output":"dist/human.esm-nobundle.js","files":80,"inputBytes":680147,"outputBytes":320414} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"tfjs/browser/esm/bundle","format":"esm","platform":"browser","input":"tfjs/tf-browser.ts","output":"dist/tfjs.esm.js","files":10,"inputBytes":1424,"outputBytes":1267703} 
+2026-10-17 18:53:55 [35mSTATE:[39m Compile: {"name":"human/browser/iife/bundle","format":"iife","platform":"browser","input":"src/human.ts","output":"dist/human.js","files":80,"inputBytes":1947139,"outputBytes":1583818} 
+2026-10-17 18:53:56 [35mSTATE:[39m Compile: {"name":"human/browser/esm/bundle","format":"esm","platform":"browser","input":"src/human.ts","output":"dist/human.esm.js","files":80,"inputBytes":1947139,"outputBytes":2067914} 
+2026-10-17 18:54:01 [35mSTATE:[39m Typings: {"input":"src/human.ts","output":"types/lib","files":78} 
