@@ -155,7 +155,8 @@ async function main() {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  const [num, den] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=r_frame_rate', '-of', 'csv=p=0', input]).toString().trim().split('/').map(Number);
+  const rate = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=r_frame_rate', '-of', 'csv=p=0', input]).toString();
+  const [num, den] = rate.trim().split('/').map(Number);
   const fps = num / (den || 1);
   execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', input, '-vsync', '0', '-q:v', '2', path.join(framesIn, '%05d.jpg')]); // ffmpeg applies the phone's rotation metadata
   const files = fs.readdirSync(framesIn).filter((f) => f.endsWith('.jpg')).sort();
