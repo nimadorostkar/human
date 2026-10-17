@@ -522,3 +522,16 @@
 2026-10-17 18:13:51 [35mSTATE:[39m test-backend-node-wasm.js passed: tensor shape: [1200,1200,3] dtype: float32 
 2026-10-17 18:13:52 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,4] {"checksum":1371996871} 
 2026-10-17 18:13:52 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:13:54 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:13:54 [35mSTATE:[39m test-backend-node-wasm.js passed: tensor shape: [1,1200,1200,4] dtype: int32 
+2026-10-17 18:13:54 [36mINFO: [39m test-backend-node-wasm.js test default 
+2026-10-17 18:13:54 [35mSTATE:[39m test-backend-node-wasm.js start async 
+2026-10-17 18:13:59 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:13:59 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:02 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:02 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg async 
+2026-10-17 18:14:02 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 1 gesture: 7 object: 1 person: 1 {"score":1,"age":23.6,"gender":"female"} {"score":0.72,"class":"person"} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:02 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 3568 
+2026-10-17 18:14:02 [35mSTATE:[39m test-backend-node-wasm.js passed: default result face match 1 female 0.97 
+2026-10-17 18:14:02 [36mINFO: [39m test-backend-node-wasm.js test sync 
+2026-10-17 18:14:02 [35mSTATE:[39m test-backend-node-wasm.js start sync 
