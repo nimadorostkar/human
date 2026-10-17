@@ -80,9 +80,9 @@ function drawBadge(ctx, x, y, text, size) {
   ctx.fillText(text, x + pad, top + pad);
 }
 
-function panelLines(name, result, faces) {
+function panelLines(name, result, faces, version) {
   const lines = [];
-  lines.push({ text: `human v${Human.Human ? new Human.Human().version : ''} · ${name} · ${result.width}x${result.height}`.replace('human v ·', 'human ·'), title: true });
+  lines.push({ text: `human v${version} by Nima Dorostkar  ·  ${name}  ·  ${result.width}x${result.height}`, title: true });
   lines.push({ text: `faces: ${result.face.length}   bodies: ${result.body.length}   hands: ${result.hand.length}   objects: ${result.object.length}   gestures: ${result.gesture.length}   time: ${Math.round(result.performance.total || 0)} ms` });
   for (const f of faces) {
     const head = f.head ? `head roll ${f.head.roll}° yaw ${f.head.yaw}° pitch ${f.head.pitch}°` : '';
@@ -110,7 +110,7 @@ async function analyze(human, file, outDir) {
   // scale fonts and lines to image size so results are readable on both small and large photos
   const scale = Math.max(image.width, image.height) / 1000;
   const fontSize = Math.max(14, Math.round(18 * scale));
-  const lines = panelLines(name, result, faces);
+  const lines = panelLines(name, result, faces, human.version);
   const lineHeight = Math.round(fontSize * 1.55);
   const panelHeight = Math.round(lineHeight * (lines.length + 1));
 
