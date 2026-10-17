@@ -603,3 +603,56 @@
 2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js passed: sensitive hand result match 
 2026-10-17 18:14:33 [36mINFO: [39m test-backend-node-wasm.js test body 
 2026-10-17 18:14:33 [35mSTATE:[39m test-backend-node-wasm.js start blazepose 
+2026-10-17 18:14:39 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:39 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:42 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:42 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg blazepose 
+2026-10-17 18:14:42 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.99,"keypoints":39} 
+2026-10-17 18:14:42 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 3025 
+2026-10-17 18:14:42 [35mSTATE:[39m test-backend-node-wasm.js passed: blazepose 
+2026-10-17 18:14:42 [35mSTATE:[39m test-backend-node-wasm.js start efficientpose 
+2026-10-17 18:14:44 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:44 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:47 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:47 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg efficientpose 
+2026-10-17 18:14:47 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.75,"keypoints":13} 
+2026-10-17 18:14:47 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 2628 
+2026-10-17 18:14:47 [35mSTATE:[39m test-backend-node-wasm.js passed: efficientpose 
+2026-10-17 18:14:47 [35mSTATE:[39m test-backend-node-wasm.js start posenet 
+2026-10-17 18:14:49 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:49 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:50 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:50 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg posenet 
+2026-10-17 18:14:50 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.96,"keypoints":16} 
+2026-10-17 18:14:50 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1046 
+2026-10-17 18:14:50 [35mSTATE:[39m test-backend-node-wasm.js passed: posenet 
+2026-10-17 18:14:50 [35mSTATE:[39m test-backend-node-wasm.js start movenet 
+2026-10-17 18:14:51 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-body.jpg [1,1200,1200,3] {"checksum":1038921856} 
+2026-10-17 18:14:51 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:52 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:52 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-body.jpg movenet 
+2026-10-17 18:14:52 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 9 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.92,"keypoints":17} 
+2026-10-17 18:14:52 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 688 
+2026-10-17 18:14:52 [35mSTATE:[39m test-backend-node-wasm.js passed: movenet 
+2026-10-17 18:14:52 [36mINFO: [39m test-backend-node-wasm.js test face matching 
+2026-10-17 18:14:52 [35mSTATE:[39m test-backend-node-wasm.js passed: face database 40 
+2026-10-17 18:14:52 [35mSTATE:[39m test-backend-node-wasm.js passed: face match {"first":{"index":4,"similarity":0.78}} {"second":{"index":4,"similarity":0.5}} {"third":{"index":4,"similarity":0.54}} 
+2026-10-17 18:14:52 [36mINFO: [39m test-backend-node-wasm.js test face similarity alternative 
+2026-10-17 18:14:52 [35mSTATE:[39m test-backend-node-wasm.js start face embeddings 
+2026-10-17 18:14:54 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34697856} 
+2026-10-17 18:14:54 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:55 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:55 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-face.jpg face embeddings 
+2026-10-17 18:14:55 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 8 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:14:55 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1038 
+2026-10-17 18:14:55 [35mSTATE:[39m test-backend-node-wasm.js passed: mobilefacenet {"embedding":192} 
+2026-10-17 18:14:55 [35mSTATE:[39m test-backend-node-wasm.js start face embeddings 
+2026-10-17 18:14:57 [35mSTATE:[39m test-backend-node-wasm.js passed: load image: samples/in/ai-face.jpg [1,256,256,3] {"checksum":34697856} 
+2026-10-17 18:14:57 [35mSTATE:[39m test-backend-node-wasm.js event: image 
+2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js event: detect 
+2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js passed: detect: samples/in/ai-face.jpg face embeddings 
+2026-10-17 18:14:59 [32mDATA: [39m test-backend-node-wasm.js  result: face: 1 body: 1 hand: 2 gesture: 8 object: 0 person: 1 {"score":1,"age":23.6,"gender":"female"} {} {"score":0.47,"keypoints":3} 
+2026-10-17 18:14:59 [32mDATA: [39m test-backend-node-wasm.js  result: performance: load: null total: 1323 
+2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js passed: insightface {"embedding":512} 
+2026-10-17 18:14:59 [36mINFO: [39m test-backend-node-wasm.js test face attention 
+2026-10-17 18:14:59 [35mSTATE:[39m test-backend-node-wasm.js start face attention 
