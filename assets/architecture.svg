@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 840" width="1400" height="840" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>How human works</title>
+  <desc>Pipeline: input frame, image preparation and frame-change check, parallel AI models for face, body, hands, objects and segmentation on a TensorFlow.js backend, then gestures, persons and smoothing combined into one result.</desc>
+  <defs>
+    <linearGradient id="title" x1="0" x2="1">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#120d22"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7d8aa3"/>
+    </marker>
+    <style>
+      .h { fill: #e6edf3; font-size: 17px; font-weight: 700; }
+      .t { fill: #e6edf3; font-size: 14px; font-weight: 600; }
+      .s { fill: #9aa6b8; font-size: 12.5px; }
+      .xs { fill: #7d8aa3; font-size: 11.5px; }
+      .code { fill: #c9d4e3; font-size: 13px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .step { font-size: 12px; font-weight: 700; fill: #0b1020; }
+      .panel { fill: #141a2b; stroke: #29324a; stroke-width: 1.5; }
+      .card { fill: #1a2236; stroke: #2e3a55; stroke-width: 1.2; }
+      .opt { fill: #161d2e; stroke: #3a4560; stroke-width: 1.2; stroke-dasharray: 5 4; }
+      .flow { stroke: #7d8aa3; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #5b6782; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1400" height="840" rx="20" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="40" y="58" font-size="30" font-weight="800" fill="url(#title)">How human works</text>
+  <text x="40" y="88" class="s" font-size="15">Every frame goes through four steps, entirely on your device. No server, no uploads, works offline.</text>
+  <g transform="translate(1180 44)">
+    <rect width="180" height="34" rx="17" fill="#13261f" stroke="#2f6b52"/>
+    <circle cx="20" cy="17" r="5" fill="#34d399"/>
+    <text x="34" y="22" font-size="13" font-weight="600" fill="#a7f3d0">100% on-device</text>
+  </g>
+
+  <!-- ============ Column 1: Input ============ -->
+  <rect x="40" y="130" width="200" height="510" rx="14" class="panel"/>
+  <text x="60" y="162" class="h">Input</text>
+  <text x="60" y="182" class="xs">anything with pixels</text>
+  <g class="t">
+    <rect x="58" y="202" width="164" height="54" rx="10" class="card"/>
+    <text x="74" y="226">Webcam</text><text x="74" y="244" class="xs">human.webcam.start()</text>
+    <rect x="58" y="268" width="164" height="54" rx="10" class="card"/>
+    <text x="74" y="292">Video</text><text x="74" y="310" class="xs">HTMLVideoElement</text>
+    <rect x="58" y="334" width="164" height="54" rx="10" class="card"/>
+    <text x="74" y="358">Image</text><text x="74" y="376" class="xs">jpg · png · drag &amp; drop</text>
+    <rect x="58" y="400" width="164" height="54" rx="10" class="card"/>
+    <text x="74" y="424">Canvas</text><text x="74" y="442" class="xs">Canvas · OffscreenCanvas</text>
+    <rect x="58" y="466" width="164" height="54" rx="10" class="card"/>
+    <text x="74" y="490">Tensor / buffer</text><text x="74" y="508" class="xs">Node.js · ImageData</text>
+  </g>
+  <text x="60" y="560" class="s">One call per frame:</text>
+  <text x="60" y="584" class="code">human.detect(input)</text>
+  <text x="60" y="606" class="xs">or human.video() for a loop</text>
+
+  <!-- ============ Column 2: Prepare ============ -->
+  <rect x="290" y="130" width="220" height="270" rx="14" class="panel"/>
+  <circle cx="314" cy="157" r="12" fill="#67e8f9"/><text x="310" y="161.5" class="step">1</text>
+  <text x="334" y="163" class="h">Prepare frame</text>
+  <text x="310" y="200" class="t">Resize &amp; normalize</text>
+  <text x="310" y="218" class="s">fit to model input size</text>
+  <text x="310" y="250" class="t">Image filters</text>
+  <text x="310" y="268" class="s">brightness, contrast, blur…</text>
+  <text x="310" y="300" class="t">Auto-brightness</text>
+  <text x="310" y="318" class="s">fixes dark webcams</text>
+  <rect x="306" y="340" width="188" height="40" rx="8" fill="#0f2a33" stroke="#1f5d6e"/>
+  <text x="400" y="365" class="code" text-anchor="middle">tensor [1, H, W, 3]</text>
+
+  <rect x="290" y="420" width="220" height="220" rx="14" class="panel"/>
+  <circle cx="314" cy="447" r="12" fill="#67e8f9"/><text x="309.5" y="451.5" class="step">1b</text>
+  <text x="334" y="453" class="h">Frame-change check</text>
+  <text x="310" y="488" class="s">Compares with the last frame.</text>
+  <text x="310" y="508" class="s">If the scene barely moved,</text>
+  <text x="310" y="528" class="s">heavy detectors are skipped</text>
+  <text x="310" y="548" class="s">and cached boxes are reused.</text>
+  <rect x="306" y="572" width="188" height="48" rx="8" class="card"/>
+  <text x="400" y="593" class="t" text-anchor="middle" font-size="13">Higher FPS, less GPU</text>
+  <text x="400" y="610" class="xs" text-anchor="middle">cacheSensitivity · skipFrames</text>
+
+  <!-- ============ Column 3: Models ============ -->
+  <rect x="560" y="130" width="440" height="510" rx="14" class="panel"/>
+  <circle cx="584" cy="157" r="12" fill="#67e8f9"/><text x="580" y="161.5" class="step">2</text>
+  <text x="604" y="163" class="h">Run AI models</text>
+  <text x="984" y="163" class="xs" text-anchor="end">in parallel · async</text>
+
+  <!-- Face -->
+  <rect x="576" y="180" width="408" height="216" rx="12" class="card"/>
+  <rect x="576" y="180" width="5" height="216" rx="2.5" fill="#22d3ee"/>
+  <text x="594" y="204" class="t" fill="#67e8f9">Face</text>
+  <text x="970" y="204" class="xs" text-anchor="end">per detected face</text>
+  <g>
+    <rect x="594" y="218" width="116" height="52" rx="8" fill="#0f2a33" stroke="#1f5d6e"/>
+    <text x="652" y="240" class="t" text-anchor="middle" font-size="13">BlazeFace</text>
+    <text x="652" y="258" class="xs" text-anchor="middle">find faces</text>
+    <rect x="726" y="218" width="116" height="52" rx="8" fill="#0f2a33" stroke="#1f5d6e"/>
+    <text x="784" y="240" class="t" text-anchor="middle" font-size="13">FaceMesh</text>
+    <text x="784" y="258" class="xs" text-anchor="middle">468 3D points</text>
+    <rect x="858" y="218" width="112" height="52" rx="8" fill="#0f2a33" stroke="#1f5d6e"/>
+    <text x="914" y="240" class="t" text-anchor="middle" font-size="13">Iris</text>
+    <text x="914" y="258" class="xs" text-anchor="middle">eyes · gaze</text>
+    <path d="M710 244 H722" class="thin"/>
+    <path d="M842 244 H854" class="thin"/>
+  </g>
+  <path d="M784 270 V286" class="thin"/>
+  <text x="594" y="301" class="xs">face crop feeds:</text>
+  <g>
+    <rect x="594" y="310" width="116" height="70" rx="8" fill="#0f2a33" stroke="#1f5d6e"/>
+    <text x="652" y="335" class="t" text-anchor="middle" font-size="13">Emotion</text>
+    <text x="652" y="353" class="xs" text-anchor="middle">happy · sad</text>
+    <text x="652" y="368" class="xs" text-anchor="middle">angry · surprise…</text>
+    <rect x="726" y="310" width="116" height="70" rx="8" fill="#0f2a33" stroke="#1f5d6e"/>
+    <text x="784" y="335" class="t" text-anchor="middle" font-size="13">FaceRes</text>
+    <text x="784" y="353" class="xs" text-anchor="middle">age · gender</text>
+    <text x="784" y="368" class="xs" text-anchor="middle">1024-d descriptor</text>
+    <rect x="858" y="310" width="112" height="70" rx="8" class="opt"/>
+    <text x="914" y="335" class="t" text-anchor="middle" font-size="13">Anti-spoof</text>
+    <text x="914" y="353" class="xs" text-anchor="middle">+ liveness</text>
+    <text x="914" y="368" class="xs" text-anchor="middle">real or photo?</text>
+  </g>
+
+  <!-- Body -->
+  <rect x="576" y="408" width="408" height="62" rx="12" class="card"/>
+  <rect x="576" y="408" width="5" height="62" rx="2.5" fill="#a78bfa"/>
+  <text x="594" y="433" class="t" fill="#c4b5fd">Body</text>
+  <text x="594" y="455" class="s">MoveNet · 17 keypoints per person</text>
+  <text x="970" y="433" class="xs" text-anchor="end">or BlazePose · EfficientPose · PoseNet</text>
+
+  <!-- Hand -->
+  <rect x="576" y="482" width="408" height="62" rx="12" class="card"/>
+  <rect x="576" y="482" width="5" height="62" rx="2.5" fill="#f472b6"/>
+  <text x="594" y="507" class="t" fill="#f9a8d4">Hands</text>
+  <text x="594" y="529" class="s">HandTrack → HandLandmark · 21 points per hand</text>
+  <text x="970" y="507" class="xs" text-anchor="end">finger pose</text>
+
+  <!-- Object + Segmentation -->
+  <rect x="576" y="556" width="198" height="68" rx="12" class="opt"/>
+  <rect x="576" y="556" width="5" height="68" rx="2.5" fill="#fbbf24"/>
+  <text x="594" y="581" class="t" fill="#fcd34d">Objects</text>
+  <text x="594" y="602" class="s">CenterNet · NanoDet</text>
+  <text x="594" y="617" class="xs">80 everyday classes</text>
+  <rect x="786" y="556" width="198" height="68" rx="12" class="opt"/>
+  <rect x="786" y="556" width="5" height="68" rx="2.5" fill="#34d399"/>
+  <text x="804" y="581" class="t" fill="#6ee7b7">Segmentation</text>
+  <text x="804" y="602" class="s">RVM · Selfie · Meet</text>
+  <text x="804" y="617" class="xs">remove background</text>
+
+  <!-- ============ Column 4: Combine + Result ============ -->
+  <rect x="1050" y="130" width="310" height="240" rx="14" class="panel"/>
+  <circle cx="1074" cy="157" r="12" fill="#67e8f9"/><text x="1070" y="161.5" class="step">3</text>
+  <text x="1094" y="163" class="h">Combine</text>
+  <text x="1070" y="200" class="t">Gestures</text>
+  <text x="1070" y="218" class="s">"thumbs up", "blink left eye", "victory"</text>
+  <text x="1070" y="252" class="t">Persons</text>
+  <text x="1070" y="270" class="s">joins face + body + hands of each person</text>
+  <text x="1070" y="304" class="t">Smoothing</text>
+  <text x="1070" y="322" class="s">human.next() interpolates between</text>
+  <text x="1070" y="340" class="s">frames for jitter-free drawing</text>
+
+  <rect x="1050" y="390" width="310" height="250" rx="14" class="panel"/>
+  <circle cx="1074" cy="417" r="12" fill="#67e8f9"/><text x="1070" y="421.5" class="step">4</text>
+  <text x="1094" y="423" class="h">Result</text>
+  <rect x="1066" y="440" width="278" height="112" rx="8" fill="#0e1424" stroke="#29324a"/>
+  <text x="1080" y="463" class="code">{ face[], body[], hand[],</text>
+  <text x="1080" y="483" class="code">  object[], gesture[],</text>
+  <text x="1080" y="503" class="code">  persons, performance }</text>
+  <text x="1080" y="535" class="xs">boxes · keypoints · scores · timings</text>
+  <text x="1066" y="578" class="t" font-size="13">Use it:</text>
+  <text x="1066" y="600" class="s"><tspan class="code" font-size="12.5">draw.all()</tspan>  overlay on canvas</text>
+  <text x="1066" y="622" class="s"><tspan class="code" font-size="12.5">match()</tspan>  face recognition · your app</text>
+
+  <!-- Flow arrows -->
+  <path d="M240 290 H286" class="flow"/>
+  <path d="M400 380 V416" class="flow"/>
+  <path d="M510 530 C536 530 536 300 556 300" class="flow"/>
+  <path d="M1000 250 H1046" class="flow"/>
+  <path d="M1205 370 V386" class="flow"/>
+
+  <!-- ============ Bottom: runtime ============ -->
+  <rect x="40" y="672" width="1320" height="128" rx="14" class="panel"/>
+  <text x="60" y="704" class="h">Runs on TensorFlow.js</text>
+  <text x="60" y="726" class="s">The fastest backend available is picked automatically.</text>
+  <g font-size="13" font-weight="600">
+    <rect x="60" y="744" width="104" height="36" rx="18" fill="#1e1638" stroke="#5b3fa8"/><text x="112" y="767" text-anchor="middle" fill="#d8b4fe">WebGPU</text>
+    <rect x="174" y="744" width="96" height="36" rx="18" fill="#1e1638" stroke="#5b3fa8"/><text x="222" y="767" text-anchor="middle" fill="#d8b4fe">WebGL</text>
+    <rect x="280" y="744" width="88" height="36" rx="18" fill="#1e1638" stroke="#5b3fa8"/><text x="324" y="767" text-anchor="middle" fill="#d8b4fe">WASM</text>
+    <rect x="378" y="744" width="76" height="36" rx="18" fill="#1e1638" stroke="#5b3fa8"/><text x="416" y="767" text-anchor="middle" fill="#d8b4fe">CPU</text>
+    <rect x="464" y="744" width="160" height="36" rx="18" fill="#1e1638" stroke="#5b3fa8"/><text x="544" y="767" text-anchor="middle" fill="#d8b4fe">Node.js (tfjs-node)</text>
+  </g>
+  <line x1="680" y1="692" x2="680" y2="780" stroke="#29324a" stroke-width="1.5"/>
+  <text x="710" y="704" class="h">Models ship with the library</text>
+  <text x="710" y="726" class="s">Loaded from <tspan class="code" font-size="12.5">/models</tspan>, only the ones you enable. No internet or cloud API needed.</text>
+  <g font-size="13" font-weight="600">
+    <rect x="710" y="744" width="150" height="36" rx="18" fill="#13261f" stroke="#2f6b52"/><text x="785" y="767" text-anchor="middle" fill="#a7f3d0">Works offline</text>
+    <rect x="870" y="744" width="170" height="36" rx="18" fill="#13261f" stroke="#2f6b52"/><text x="955" y="767" text-anchor="middle" fill="#a7f3d0">Nothing uploaded</text>
+    <rect x="1050" y="744" width="160" height="36" rx="18" fill="#13261f" stroke="#2f6b52"/><text x="1130" y="767" text-anchor="middle" fill="#a7f3d0">Web workers</text>
+  </g>
+</svg>

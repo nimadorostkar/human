@@ -9,7 +9,7 @@
 
 By **Nima Dorostkar** · [Live demo](https://nimadorostkar.github.io/human/) · [npm](https://www.npmjs.com/package/@nimadorostkar/human) · [API docs](typedoc/index.html)
 
-[<img src="assets/results/result-3.jpg" width="100%"/>](assets/results/result-3.jpg)
+[<img src="assets/architecture.svg" width="100%" alt="How human works: input, prepare frame, run AI models, combine, result"/>](assets/architecture.svg)
 
 | | |
 | --- | --- |

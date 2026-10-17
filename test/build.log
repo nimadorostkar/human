@@ -41,3 +41,85 @@
 2026-10-17 18:54:59 [35mSTATE:[39m Models {"folder":"./models","models":11} 
 2026-10-17 18:55:00 [35mSTATE:[39m Models: {"count":57,"totalSize":27530157} 
 2026-10-17 18:55:00 [36mINFO: [39m Human Build complete... {"logFile":"test/build.log"} 
+2026-10-17 22:05:59 [36mINFO: [39m @nimadorostkar/human version 3.0.0 
+2026-10-17 22:05:59 [36mINFO: [39m User: nima Platform: darwin Arch: x64 Node: v25.9.0 
+2026-10-17 22:05:59 [36mINFO: [39m Application: {"name":"@nimadorostkar/human","version":"3.0.0"} 
+2026-10-17 22:05:59 [36mINFO: [39m Environment: {"profile":"serve","config":".build.json","package":"package.json","tsconfig":true,"eslintrc":true,"git":true} 
+2026-10-17 22:05:59 [36mINFO: [39m Toolchain: {"build":"0.10.3","esbuild":"0.25.12","typescript":"5.9.2","typedoc":"0.28.11","eslint":"8.57.0"} 
+2026-10-17 22:05:59 [36mINFO: [39m Build: {"profile":"serve","steps":["serve"]} 
+2026-10-17 22:05:59 [35mSTATE:[39m WebServer: {"ssl":false,"port":8000,"root":"."} 
+2026-10-17 22:05:59 [35mSTATE:[39m WebServer: {"ssl":true,"port":8001,"root":".","sslKey":"node_modules/@vladmandic/build/cert/https.key","sslCrt":"node_modules/@vladmandic/build/cert/https.crt"} 
+2026-10-17 22:05:59 [36mINFO: [39m Listening... ["http://localhost:8000","https://localhost:8001"] 
+2026-10-17 22:06:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:06:00 [32mDATA: [39m HTTP: {"method":"HEAD","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:06:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
+2026-10-17 22:06:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 22:15:35 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 22:15:36 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
+2026-10-17 22:15:36 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/png","size":142790,"url":"/assets/icon.png","remote":"::1"} 
+2026-10-17 22:15:38 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:16:09 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
+2026-10-17 22:16:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/png","size":142790,"url":"/assets/icon.png","remote":"::1"} 
+2026-10-17 22:16:12 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:17:43 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:17:43 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
+2026-10-17 22:17:44 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/png","size":142790,"url":"/assets/icon.png","remote":"::1"} 
+2026-10-17 22:17:46 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 22:50:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 22:50:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
+2026-10-17 22:50:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/png","size":142790,"url":"/assets/icon.png","remote":"::1"} 
+2026-10-17 22:50:17 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:56:12 [33mWARN: [39m HTTP: {"method":"GET","ver":"1.1","status":404,"url":"/admin/","remote":"::1"} 
+2026-10-17 22:56:13 [33mWARN: [39m HTTP: {"method":"GET","ver":"1.1","status":404,"url":"/admin/","remote":"::1"} 
+2026-10-17 22:56:13 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:56:14 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":33914,"url":"/","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":47341,"url":"/index.js","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067914,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":9177,"url":"/helpers/menu.js","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 22:56:15 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 22:56:16 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
+2026-10-17 22:56:16 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"application/manifest+json","size":304,"url":"/manifest.webmanifest","remote":"::1"} 
+2026-10-17 22:56:16 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/png","size":142790,"url":"/assets/icon.png","remote":"::1"} 
+2026-10-17 22:56:18 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 23:27:56 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/svg+xml","size":13467,"url":"/assets/architecture.svg","remote":"::1"} 
+2026-10-17 23:27:56 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
+2026-10-17 23:27:59 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
+2026-10-17 23:28:09 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/svg+xml","size":13407,"url":"/assets/architecture.svg","remote":"::1"} 
+2026-10-17 23:28:09 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
+2026-10-17 23:28:10 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":4033,"url":"/index-pwa.js","remote":"::1"} 
