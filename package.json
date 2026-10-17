@@ -51,7 +51,8 @@
     "test": "node --no-warnings --unhandled-rejections=strict --trace-uncaught test/node.js",
     "lint": "eslint *.json *.js src demo test models wiki",
     "scan": "npx auditjs@latest ossi --dev --quiet",
-    "serve": "build --profile serve"
+    "serve": "build --profile serve",
+    "compile": "build --profile compile"
   },
   "keywords": [
     "human",
