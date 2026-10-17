@@ -79,21 +79,21 @@ export async function tensor(input: Tensor2D, output: HTMLCanvasElement) {
 }
 
 /** meta-function that performs draw for: canvas, face, body, hand */
-export async function all(inCanvas: AnyCanvas, result: Result, drawOptions?: Partial<DrawOptions>) {
-  if (!result?.performance || !inCanvas) return null;
+export function all(inCanvas: AnyCanvas, result: Result, drawOptions?: Partial<DrawOptions>) { // returns a promise to keep the public api stable
+  if (!result?.performance || !inCanvas) return Promise.resolve(null);
   const timeStamp = now();
   const localOptions = mergeDeep(options, drawOptions);
-  const promise = Promise.all([
+  const drawn = [
     face(inCanvas, result.face, localOptions),
     body(inCanvas, result.body, localOptions),
     hand(inCanvas, result.hand, localOptions),
     object(inCanvas, result.object, localOptions),
     gesture(inCanvas, result.gesture, localOptions), // gestures do not have buffering
     // person(inCanvas, result.persons, localOptions); // already included above
-  ]);
+  ];
   drawTime = env.perfadd ? drawTime + Math.round(now() - timeStamp) : Math.round(now() - timeStamp);
   result.performance.draw = drawTime;
-  return promise;
+  return Promise.resolve(drawn);
 }
 
 /** sets default label templates for face/body/hand/object/gestures */

@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src", "tfjs/*.ts", "types/human.d.ts", "test/**/*.ts", "demo/**/*.ts"]
+}

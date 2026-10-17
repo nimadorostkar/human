@@ -3,7 +3,6 @@ const path = require('path');
 const log = require('@vladmandic/pilogger'); // eslint-disable-line node/no-unpublished-require
 const Build = require('@vladmandic/build').Build; // eslint-disable-line node/no-unpublished-require
 const APIExtractor = require('@microsoft/api-extractor'); // eslint-disable-line node/no-unpublished-require
-const tf = require('@tensorflow/tfjs-node'); // eslint-disable-line node/no-unpublished-require
 const packageJSON = require('./package.json');
 
 const logFile = 'test/build.log';
@@ -70,36 +69,29 @@ function regExFile(src, entries) {
 }
 
 async function analyzeModels() {
+  // model weight sizes are read directly from model manifests so build does not depend on native tfjs-node bindings
   log.info('Analyze models:', { folders: modelsFolders.length, result: modelsOut });
+  const models = fs.existsSync(modelsOut) ? JSON.parse(fs.readFileSync(modelsOut, 'utf8')) : {}; // keep entries for models that are not available locally
   let totalSize = 0;
-  const models = {};
-  const allModels = [];
   for (const folder of modelsFolders) {
-    try {
-      if (!fs.existsSync(folder)) continue;
-      const stat = fs.statSync(folder);
-      if (!stat.isDirectory) continue;
-      const dir = fs.readdirSync(folder);
-      const found = dir.map((f) => `file://${folder}/${f}`).filter((f) => f.endsWith('json'));
-      log.state('Models', { folder, models: found.length });
-      allModels.push(...found);
-    } catch {
-      // log.warn('Cannot enumerate:', modelFolder);
+    if (!fs.existsSync(folder) || !fs.statSync(folder).isDirectory()) continue;
+    const found = fs.readdirSync(folder).filter((f) => f.endsWith('.json') && f !== path.basename(modelsOut));
+    log.state('Models', { folder, models: found.length });
+    for (const file of found) {
+      try {
+        const json = JSON.parse(fs.readFileSync(path.join(folder, file), 'utf8'));
+        if (!json.weightsManifest) continue;
+        const paths = json.weightsManifest.flatMap((group) => group.paths);
+        const size = paths.reduce((sum, p) => sum + (fs.existsSync(path.join(folder, p)) ? fs.statSync(path.join(folder, p)).size : 0), 0);
+        const name = file.replace('.json', '');
+        totalSize += size;
+        models[name] = size;
+      } catch (err) {
+        log.warn('Analyze model:', { folder, file, err: err.message });
+      }
     }
   }
-  for (const url of allModels) {
-    // if (!f.endsWith('.json')) continue;
-    // const url = `file://${modelsDir}/${f}`;
-    const model = new tf.GraphModel(url); // create model prototype and decide if load from cache or from original modelurl
-    model.findIOHandler();
-    const artifacts = await model.handler.load();
-    const size = artifacts?.weightData?.byteLength || 0;
-    totalSize += size;
-    const name = path.basename(url).replace('.json', '');
-    if (!models[name]) models[name] = size;
-  }
-  const json = JSON.stringify(models, null, 2);
-  fs.writeFileSync(modelsOut, json);
+  fs.writeFileSync(modelsOut, JSON.stringify(models, null, 2));
   log.state('Models:', { count: Object.keys(models).length, totalSize });
 }
 

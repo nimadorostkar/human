@@ -8,7 +8,7 @@
     {
       "files": ["**/*.ts"],
       "parser": "@typescript-eslint/parser",
-      "parserOptions": { "ecmaVersion": "latest", "project": ["./tsconfig.json"] },
+      "parserOptions": { "ecmaVersion": "latest", "project": ["./tsconfig.eslint.json"] },
       "plugins": ["@typescript-eslint"],
       "env": {
         "browser": true,
@@ -75,7 +75,7 @@
     {
       "files": ["**/*.d.ts"],
       "parser": "@typescript-eslint/parser",
-      "parserOptions": { "ecmaVersion": "latest", "project": ["./tsconfig.json"] },
+      "parserOptions": { "ecmaVersion": "latest", "project": ["./tsconfig.eslint.json"] },
       "plugins": ["@typescript-eslint"],
       "env": {
         "browser": true,

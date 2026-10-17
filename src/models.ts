@@ -164,7 +164,8 @@ export class Models {
     for (const [model, promise] of Object.entries(m)) {
       if (promise?.['then']) promise['then']((val) => this.models[model] = val);
     }
-    await Promise.all(Object.values(m)); // wait so this function does not resolve prematurely
+    const pending = Object.values(m).filter((promise): promise is Promise<GraphModel> => promise instanceof Promise);
+    await Promise.all(pending); // wait so this function does not resolve prematurely
   }
 
   list() {
