@@ -1,9 +1,11 @@
 node_modules/
 types/lib
 pnpm-lock.yaml
-package-lock.json
 *.swp
 samples/**/*.mp4
 samples/**/*.webm
 temp
 tmp
+samples/out
+.DS_Store
+.env

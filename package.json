@@ -1,47 +1,106 @@
 {
-  "name": "human",
+  "name": "@nimadorostkar/human",
   "version": "1.0.0",
   "description": "Human by Nima Dorostkar: AI-powered 3D Face Detection & Rotation Tracking, Face Description & Recognition, Body Pose Tracking, 3D Hand & Finger Tracking, Iris Analysis, Age & Gender & Emotion Prediction, Gaze Tracking, Gesture Recognition",
   "author": "Nima Dorostkar <nimadorostkar97@gmail.com>",
   "contributors": [
     "Vladimir Mandic (original Human library, MIT)"
   ],
+  "license": "MIT",
+  "homepage": "https://github.com/nimadorostkar/human",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimadorostkar/human.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nimadorostkar/human/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "sideEffects": false,
   "main": "dist/human.node.js",
   "module": "dist/human.esm.js",
   "browser": "dist/human.esm.js",
   "types": "types/human.d.ts",
   "exports": {
-    "node": "./dist/human.node.js",
-    "script": "./dist/human.js",
-    "module": "./dist/human.esm.js",
-    "types": "./types/human.d.ts",
-    "dist/human": "./dist/human.js",
-    "dist/human.js": "./dist/human.js",
-    "dist/human.esm": "./dist/human.esm.js",
-    "dist/human.esm.js": "./dist/human.esm.js",
-    "dist/human.esm-nobundle": "./dist/human.esm-nobundle.js",
-    "dist/human.esm-nobundle.js": "./dist/human.esm-nobundle.js",
-    "dist/human.node": "./dist/human.node.js",
-    "dist/human.node.js": "./dist/human.node.js",
-    "dist/human.node-wasm": "./dist/human.node-wasm.js",
-    "dist/human.node-wasm.js": "./dist/human.node-wasm.js",
-    "dist/human.node-gpu": "./dist/human.node-gpu.js",
-    "dist/human.node-gpu.js": "./dist/human.node-gpu.js",
-    "require": "./dist/human.node.js",
-    "import": "./dist/human.esm.js"
+    ".": {
+      "types": "./types/human.d.ts",
+      "node": "./dist/human.node.js",
+      "import": "./dist/human.esm.js",
+      "require": "./dist/human.node.js",
+      "default": "./dist/human.esm.js"
+    },
+    "./dist/human": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.js"
+    },
+    "./dist/human.js": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.js"
+    },
+    "./dist/human.esm": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.esm.js"
+    },
+    "./dist/human.esm.js": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.esm.js"
+    },
+    "./dist/human.esm-nobundle": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.esm-nobundle.js"
+    },
+    "./dist/human.esm-nobundle.js": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.esm-nobundle.js"
+    },
+    "./dist/human.node": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.node.js"
+    },
+    "./dist/human.node.js": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.node.js"
+    },
+    "./dist/human.node-wasm": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.node-wasm.js"
+    },
+    "./dist/human.node-wasm.js": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.node-wasm.js"
+    },
+    "./dist/human.node-gpu": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.node-gpu.js"
+    },
+    "./dist/human.node-gpu.js": {
+      "types": "./types/human.d.ts",
+      "default": "./dist/human.node-gpu.js"
+    },
+    "./dist/tfjs.esm": {
+      "types": "./dist/tfjs.esm.d.ts",
+      "default": "./dist/tfjs.esm.js"
+    },
+    "./dist/tfjs.esm.js": {
+      "types": "./dist/tfjs.esm.d.ts",
+      "default": "./dist/tfjs.esm.js"
+    },
+    "./models/*": "./models/*",
+    "./package.json": "./package.json"
   },
-  "bugs": {
-    "url": "https://github.com/nimadorostkar/human/issues"
-  },
-  "homepage": "https://github.com/nimadorostkar/human",
-  "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nimadorostkar/human.git"
+  "files": [
+    "dist/",
+    "types/human.d.ts",
+    "types/tfjs-core.d.ts",
+    "types/tfjs.esm.d.ts",
+    "models/",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "start": "node --no-warnings demo/nodejs/node.js",
@@ -49,10 +108,11 @@
     "clean": "build --profile clean",
     "build": "rimraf test/build.log && node build.js",
     "test": "node --no-warnings --unhandled-rejections=strict --trace-uncaught test/node.js",
-    "lint": "eslint *.json *.js src demo test models wiki",
-    "scan": "npx auditjs@latest ossi --dev --quiet",
+    "lint": "eslint *.json *.js src demo test models",
     "serve": "build --profile serve",
-    "compile": "build --profile compile"
+    "compile": "build --profile compile",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "human",
