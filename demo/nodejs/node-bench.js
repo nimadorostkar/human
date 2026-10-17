@@ -9,7 +9,6 @@ const canvas = require('canvas'); // eslint-disable-line node/no-unpublished-req
 const config = {
   cacheSensitivity: 0.01,
   wasmPlatformFetch: true,
-  modelBasePath: 'https://vladmandic.github.io/human-models/models/',
 };
 const count = 10;
 
@@ -27,6 +26,7 @@ async function runHuman(module, backend) {
   if (backend === 'wasm') require('@tensorflow/tfjs-backend-wasm'); // eslint-disable-line node/no-unpublished-require, global-require
   const Human = require('../../dist/' + module); // eslint-disable-line global-require, import/no-dynamic-require
   config.backend = backend;
+  config.modelBasePath = backend === 'wasm' ? 'https://vladmandic.github.io/human-models/models/' : 'file://models/'; // wasm backend in nodejs cannot load models from file system
   const human = new Human.Human(config);
   human.env.Canvas = canvas.Canvas;
   human.env.Image = canvas.Image;
@@ -58,7 +58,7 @@ async function main() {
     await runHuman(process.argv[2], process.argv[3]);
   } else {
     await executeWorker(['human.node.js', 'tensorflow']);
-    await executeWorker(['human.node-gpu.js', 'tensorflow']);
+    if (process.env.HUMAN_TEST_GPU === 'true') await executeWorker(['human.node-gpu.js', 'tensorflow']); // requires nvidia cuda and a native build of tfjs-node-gpu
     await executeWorker(['human.node-wasm.js', 'wasm']);
   }
 }
