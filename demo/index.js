@@ -71,7 +71,7 @@ const drawOptions = {
   drawBoxes: true,
   drawGaze: true,
   drawLabels: true,
-  drawGestures: true,
+  drawGestures: false, // gesture list is opt-in from the overlay panel
   drawPolygons: true,
   drawPoints: false,
   fillPolygons: false,
@@ -710,6 +710,7 @@ function setupMenu() {
   menu.display.addBool('Bounding boxes', drawOptions, 'drawBoxes');
   menu.display.addBool('Mesh outlines', drawOptions, 'drawPolygons');
   menu.display.addBool('Filled mesh', drawOptions, 'fillPolygons');
+  menu.display.addBool('Gesture list', drawOptions, 'drawGestures');
 
   menu.image = new Menu(document.body, '');
   menu.image.addHeader('Filters', 'Tune the input before detection', 'i-filters');
