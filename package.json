@@ -45,13 +45,13 @@
   },
   "scripts": {
     "start": "node --no-warnings demo/nodejs/node.js",
-    "dev": "node node_modules/@vladmandic/build/src/build.js --profile development",
+    "dev": "build --profile development",
     "clean": "build --profile clean",
     "build": "rimraf test/build.log && node build.js",
     "test": "node --no-warnings --unhandled-rejections=strict --trace-uncaught test/node.js",
     "lint": "eslint *.json *.js src demo test models wiki",
     "scan": "npx auditjs@latest ossi --dev --quiet",
-    "serve": "node node_modules/@vladmandic/build/src/build.js --profile serve"
+    "serve": "build --profile serve"
   },
   "keywords": [
     "human",

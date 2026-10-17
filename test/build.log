@@ -49,3 +49,22 @@
 2025-08-26 11:39:21 [35mSTATE:[39m Models {"folder":"../nanodet/models","models":4} 
 2025-08-26 11:39:22 [35mSTATE:[39m Models: {"count":58,"totalSize":380063249} 
 2025-08-26 11:39:22 [36mINFO: [39m Human Build complete... {"logFile":"test/build.log"} 
+2026-10-17 17:55:52 [36mINFO: [39m human version 1.0.0 
+2026-10-17 17:55:52 [36mINFO: [39m User: nima Platform: darwin Arch: x64 Node: v25.9.0 
+2026-10-17 17:55:52 [36mINFO: [39m Application: {"name":"human","version":"1.0.0"} 
+2026-10-17 17:55:52 [36mINFO: [39m Environment: {"profile":"serve","config":".build.json","package":"package.json","tsconfig":true,"eslintrc":true,"git":true} 
+2026-10-17 17:55:52 [36mINFO: [39m Toolchain: {"build":"0.10.3","esbuild":"0.25.12","typescript":"5.9.2","typedoc":"0.28.11","eslint":"8.57.0"} 
+2026-10-17 17:55:52 [36mINFO: [39m Build: {"profile":"serve","steps":["serve"]} 
+2026-10-17 17:55:52 [35mSTATE:[39m WebServer: {"ssl":false,"port":8000,"root":"."} 
+2026-10-17 17:55:53 [35mSTATE:[39m WebServer: {"ssl":true,"port":8001,"root":".","sslKey":"node_modules/@vladmandic/build/cert/https.key","sslCrt":"node_modules/@vladmandic/build/cert/https.crt"} 
+2026-10-17 17:55:53 [36mINFO: [39m Listening... ["http://localhost:8000","https://localhost:8001"] 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/html","size":7555,"url":"/demo/index.html","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/css","size":107884,"url":"/demo/icons.css","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":44987,"url":"/demo/index.js","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":2067899,"url":"/dist/human.esm.js","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":14308,"url":"/demo/helpers/menu.js","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":10535,"url":"/demo/helpers/gl-bench.js","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":3397,"url":"/demo/helpers/webrtc.js","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"text/javascript","size":5689,"url":"/demo/helpers/jsonview.js","remote":"::1"} 
+2026-10-17 17:56:00 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"font/woff2","size":181500,"url":"/assets/lato-light.woff2","remote":"::1"} 
+2026-10-17 17:56:01 [32mDATA: [39m HTTP: {"method":"GET","ver":"1.1","status":200,"mime":"image/x-icon","size":261950,"url":"/favicon.ico","remote":"::1"} 
