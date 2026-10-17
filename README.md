@@ -9,6 +9,8 @@
 
 By **Nima Dorostkar** · [Live demo](https://nimadorostkar.github.io/human/) · [npm](https://www.npmjs.com/package/@nimadorostkar/human) · [API docs](typedoc/index.html)
 
+<p align="center"><img src="assets/demo.gif" width="400" alt="human analyzing a live video: face mesh, iris, gaze, body and hand tracking with age, gender and emotion"/></p>
+
 [<img src="assets/architecture.svg" width="100%" alt="How human works: input, prepare frame, run AI models, combine, result"/>](assets/architecture.svg)
 
 | | |
