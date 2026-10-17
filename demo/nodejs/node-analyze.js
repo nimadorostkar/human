@@ -206,7 +206,7 @@ async function analyze(human, faceHuman, file, outDir) {
   result.height = image.height;
   result.face = await detectFacesTiled(faceHuman, image, result.face);
   const objects = result.object.filter((o) => o.label !== 'person'); // people are already covered by face and body results
-  result.hand = result.hand.filter((h) => !result.face.some((f) => overlap(f.box, h.box) > 0.5)); // hand detector can fire on faces in group photos
+  result.hand = result.hand.filter((h) => h.box.every(Number.isFinite) && !result.face.some((f) => overlap(f.box, h.box) > 0.5)); // drop invalid hands and hands found on faces in group photos
   result.body = result.body.filter((b) => !result.face.some((f) => overlap(f.box, b.box) > 0.6 && b.box[3] < f.box[3])); // drop spurious poses found inside close-up faces
   const faces = result.face.map(faceSummary);
 

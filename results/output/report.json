@@ -5,7 +5,7 @@
       640,
       640
     ],
-    "timeMs": 923,
+    "timeMs": 860,
     "faces": [
       {
         "id": 0,
@@ -70,7 +70,7 @@
       1921,
       933
     ],
-    "timeMs": 1189,
+    "timeMs": 1077,
     "faces": [
       {
         "id": 0,
@@ -254,7 +254,7 @@
       1438,
       784
     ],
-    "timeMs": 3214,
+    "timeMs": 2819,
     "faces": [
       {
         "id": 0,
@@ -768,30 +768,7 @@
         "keypoints": 16
       }
     ],
-    "hands": [
-      {
-        "id": 0,
-        "label": "hand",
-        "score": 0.86,
-        "box": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "id": 1,
-        "label": "hand",
-        "score": 0.61,
-        "box": [
-          null,
-          null,
-          null,
-          null
-        ]
-      }
-    ],
+    "hands": [],
     "objects": [],
     "gestures": [
       "facing center",
@@ -813,7 +790,7 @@
       720,
       907
     ],
-    "timeMs": 1174,
+    "timeMs": 845,
     "faces": [
       {
         "id": 0,
