@@ -3,6 +3,7 @@
 # usage: deploy/site.sh <output-folder>
 set -eu
 
+
 OUT="${1:-_site}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
@@ -21,3 +22,4 @@ cp "$ROOT/favicon.ico" "$OUT/favicon.ico"
 cp "$ROOT/deploy/index.html" "$OUT/index.html"
 touch "$OUT/.nojekyll"
 echo "Static site assembled in $OUT ($(du -sh "$OUT" | cut -f1))"
+
